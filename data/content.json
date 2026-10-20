@@ -288,7 +288,7 @@
       "title": "艺术指导",
       "en": "Art Direction",
       "layout": "ai-large",
-      "text": "通过构图、材质与光线，建立统一而有情绪的图像语言。",
+      "text": "以海报构图、图形节奏与配色，建立各自鲜明的品牌情绪。",
       "cover": "/original/poster-01.svg",
       "works": [
         {
@@ -315,10 +315,10 @@
       "slug": "3d-motion",
       "number": "03",
       "icon": "cube",
-      "title": "产品视觉",
-      "en": "Product Imagery",
+      "title": "产品与包装视觉",
+      "en": "Product & Packaging",
       "layout": "ai-large",
-      "text": "把产品特征转化为清晰的画面焦点，研究质感与空间关系。",
+      "text": "从产品主视觉到包装平面概念，让材质、信息与品牌识别形成一致表达。",
       "cover": "/original/packaging-01.svg",
       "works": [
         {
@@ -348,7 +348,7 @@
       "title": "数字表达",
       "en": "Digital Expression",
       "layout": "ai-large",
-      "text": "让视觉概念进入页面，兼顾信息层级、阅读节奏与交互。",
+      "text": "将品牌系统延展到数字页面，研究信息层级与首屏表达；展示为静态视觉提案。",
       "cover": "/original/digital-01.svg",
       "works": [
         {

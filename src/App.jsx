@@ -61,17 +61,23 @@ function Header() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    if (!open) return
+    const dismiss = event => { if (event.key === 'Escape') { setOpen(false); document.querySelector('.menu-button')?.focus() } }
+    window.addEventListener('keydown', dismiss)
+    return () => window.removeEventListener('keydown', dismiss)
+  }, [open])
   const close = () => setOpen(false)
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <a className={`nav-home ${active === 'top' ? 'is-active' : ''}`} href="#top" onClick={close} aria-current={active === 'top' ? 'location' : undefined}>首页</a>
-      <nav className={open ? 'is-open' : ''} aria-label="主导航">
+      <nav id="main-navigation" className={open ? 'is-open' : ''} aria-label="主导航">
         <a className={active === 'experience' ? 'is-active' : ''} href="#experience" onClick={close} aria-current={active === 'experience' ? 'location' : undefined}>关于我</a>
         <a className={active === 'work' ? 'is-active' : ''} href="#work" onClick={close} aria-current={active === 'work' ? 'location' : undefined}>精选作品</a>
         <a className={active === 'capabilities' ? 'is-active' : ''} href="#capabilities" onClick={close} aria-current={active === 'capabilities' ? 'location' : undefined}>核心能力</a>
         <a className={active === 'contact' ? 'is-active' : ''} href="#contact" onClick={close} aria-current={active === 'contact' ? 'location' : undefined}>联系我</a>
       </nav>
-      <button className="menu-button" onClick={() => setOpen(!open)} aria-label="切换导航" aria-expanded={open}><span /><span /></button>
+      <button className="menu-button" onClick={() => setOpen(!open)} aria-label={open ? "关闭导航" : "打开导航"} aria-controls="main-navigation" aria-expanded={open}><span /><span /></button>
     </header>
   )
 }
@@ -290,7 +296,7 @@ function Work({ projectData, email }) {
           {projectData.map((project, index) => (
             <article className={`project project-${index + 1} reveal`} key={project.id}>
               <a className="project-entry" href={`/project/${project.id}`}>
-                <div className="project-image"><img src={project.image} alt={`${project.title} 项目概念视觉`} /><span className="project-open" aria-hidden="true"><ImageSquare weight="bold" /></span><span className="project-id">{project.id}</span></div>
+                <div className="project-image"><img loading="lazy" decoding="async" src={project.image} alt={`${project.title} 项目概念视觉`} /><span className="project-open" aria-hidden="true"><ImageSquare weight="bold" /></span><span className="project-id">{project.id}</span></div>
                 <div className="project-copy"><div><span>{project.type}</span><h3>{project.title}</h3></div><div className="project-side"><p>{project.subtitle}</p><b>查看研究 <ArrowUpRight weight="bold" /></b></div></div>
               </a>
             </article>
@@ -625,7 +631,7 @@ function CapabilityPage({ content, slug }) {
               {capability.works.map((work, index) => (
                 <article className="capability-work-card" key={work.id || index}>
                   <div><CapabilityMedia source={work.image} title={work.title} /><span>{String(index + 1).padStart(2, '0')}</span></div>
-                  <h3>{work.title}</h3><p>{work.description}</p>
+                  <h3>{work.title}</h3><p>{work.description}</p><a className="capability-case-link" href={"/project/" + work.id}>查看完整品牌案例 <ArrowUpRight /></a>
                 </article>
               ))}
             </div>
@@ -635,6 +641,35 @@ function CapabilityPage({ content, slug }) {
       </main>
     </div>
   )
+}
+
+function ArtworkViewer({ boards, title }) {
+  const dialogRef = useRef(null)
+  const [selected, setSelected] = useState(0)
+  const triggerRef = useRef(null)
+  const open = (index, event) => {
+    triggerRef.current = event.currentTarget
+    setSelected(index)
+    dialogRef.current.showModal()
+  }
+  const close = () => dialogRef.current.close()
+  useEffect(() => {
+    const dialog = dialogRef.current
+    const restore = () => { document.body.style.overflow = ''; triggerRef.current?.focus() }
+    dialog.addEventListener('close', restore)
+    return () => { dialog.removeEventListener('close', restore); document.body.style.overflow = '' }
+  }, [])
+  return <>
+    <div className="system-boards">{boards.map((board,index) => <figure key={board.image}>
+      <button className="artwork-open" onClick={event => { document.body.style.overflow = 'hidden'; open(index,event) }} aria-label={'放大查看：' + board.title}><img loading="lazy" decoding="async" width="1500" height="1000" src={board.image} alt={title + ' — ' + board.title} /><span>查看细节 ↗</span></button>
+      <figcaption><span>0{index+1} / {board.title}</span><p>{board.note}</p></figcaption>
+    </figure>)}</div>
+    <dialog className="artwork-dialog" ref={dialogRef} aria-label="设计稿大图查看器" onClick={event => { if(event.target === event.currentTarget) close() }} onKeyDown={event => { if(event.key === 'ArrowRight') { event.preventDefault(); setSelected(index => (index+1)%boards.length) } if(event.key === 'ArrowLeft') { event.preventDefault(); setSelected(index => (index+boards.length-1)%boards.length) } }}>
+      <div className="artwork-toolbar"><span>{String(selected+1).padStart(2,'0')} / {String(boards.length).padStart(2,'0')} — {boards[selected].title}</span><button onClick={close} aria-label="关闭大图">关闭 ×</button></div>
+      <img src={boards[selected].image} alt={title + ' — ' + boards[selected].title} />
+      <div className="artwork-controls"><button onClick={() => setSelected(index => (index+boards.length-1)%boards.length)}>← 上一张</button><span>可使用键盘 ← → 切换 · Esc 关闭</span><button onClick={() => setSelected(index => (index+1)%boards.length)}>下一张 →</button></div>
+    </dialog>
+  </>
 }
 
 function ProjectPage({ content, id }) {
@@ -648,13 +683,13 @@ function ProjectPage({ content, id }) {
     <main className="shell project-case">
       <div className="case-heading"><div><p className="micro-title">SELECTED PROJECT / {String(index + 1).padStart(2, '0')}</p><h1>{project.title}</h1><p className="case-subtitle">{project.subtitle}</p></div><span className="case-edition">CONCEPT STUDY<br />2026</span></div>
       <div className="case-facts"><div><small>DISCIPLINE / 设计范围</small><p>品牌识别 · 艺术指导 · 产品视觉</p></div><div><small>APPROACH / 创作方式</small><p>视觉概念 · AI 辅助图像 · 字标研究</p></div><div><small>STATUS / 项目性质</small><p>自主概念 / 非商业委托</p></div></div>
-      <figure className="case-hero"><img className="case-image" src={project.image} alt={project.title + ' 产品主视觉'} fetchPriority="high" /><figcaption><span>01 / KEY VISUAL</span><span>产品主视觉 · 材质与光线研究</span></figcaption></figure>
-      <div className="case-notes">{notes.map(([number, title, text]) => <section key={number}><span className="case-note-index">{number}</span><h2>{title}</h2><p>{text}</p></section>)}</div>
+      <nav className="case-sections" aria-label="案例目录"><a href="#case-visual">01 主视觉</a><a href="#case-strategy">02 设计策略</a><a href="#brand-system">03 品牌系统与应用</a></nav><figure className="case-hero" id="case-visual"><img className="case-image" src={project.image} alt={project.title + ' 产品主视觉'} fetchPriority="high" /><figcaption><span>01 / KEY VISUAL</span><span>产品主视觉 · 材质与光线研究</span></figcaption></figure>
+      <div className="case-notes" id="case-strategy">{notes.map(([number, title, text]) => <section key={number}><span className="case-note-index">{number}</span><h2>{title}</h2><p>{text}</p></section>)}</div>
       {project.identity && <figure className="case-identity"><figcaption><span>02 / VISUAL IDENTITY</span><span>字标与配色探索</span></figcaption><img loading="lazy" src={project.identity} alt={`${project.title} 字标与配色研究`} /></figure>}
       {project.system && <section id="brand-system" className="brand-system" style={{'--case-ink':project.system.ink,'--case-paper':project.system.paper}} aria-label="品牌系统与应用">
         <div className="system-intro"><p className="micro-title">03 / FROM IDENTITY TO EXPERIENCE</p><h2>{project.system.tagline}</h2><p>{project.system.idea}</p></div>
         <div className="system-palette">{project.system.palette.map(color => <div key={color.hex}><span style={{background:color.hex}} /><b>{color.name}</b><code>{color.hex}</code></div>)}</div>
-        <div className="system-boards">{project.system.boards.map((board,index) => <figure key={board.image}><img loading="lazy" width="1500" height="1000" src={board.image} alt={project.title + ' — ' + board.title} /><figcaption><span>0{index+1} / {board.title}</span><p>{board.note}</p></figcaption></figure>)}</div>
+        <ArtworkViewer boards={project.system.boards} title={project.title} />
       </section>}
       <nav className="case-next" aria-label="浏览其他案例"><a className="case-back" href="/#work">← 全部作品</a><a className="case-next-link" href={'/project/' + next.id}><img loading="lazy" src={next.image} alt="" /><span><small>NEXT PROJECT / 下一案例</small><b>{next.title}</b></span><ArrowUpRight /></a></nav>
     </main></div>
