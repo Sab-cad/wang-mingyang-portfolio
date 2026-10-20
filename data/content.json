@@ -1,0 +1,302 @@
+{
+  "profile": {
+    "nameEn": "你的名字",
+    "role": "视觉设计师 / AI 创意设计师",
+    "heroRole": "VISUAL / AI DESIGNER",
+    "services": "产品视觉 / 电商设计 / AI 创意",
+    "location": "你的城市（示意）",
+    "address": "你的城市（示意）",
+    "email": "hello@example.com",
+    "phone": "暂未公开",
+    "intro": "这里是我的视觉作品集，记录产品视觉、电商内容与 AI 创意探索。本版本使用示意资料与原包素材；正式使用前，请替换为自己的项目、职责与真实经历。",
+    "stats": {
+      "experience": "—",
+      "projects": "—",
+      "brands": "—"
+    }
+  },
+  "media": {
+    "hero": "/assets/hero-cloud-ip05-v1.png",
+    "portrait": "/assets/snake-boy-05-art-toy.png",
+    "contact": "/assets/hero-cloud-ip05-v1.png",
+    "wechatQr": "/assets/wechat-qr-placeholder.svg"
+  },
+  "heroGallery": [
+    {
+      "id": "gallery-01",
+      "image": "/uploads/1792389003332-fb344cd2-1.webp",
+      "alt": "电动自行车场景视觉 1"
+    },
+    {
+      "id": "gallery-02",
+      "image": "/uploads/1792390330962-520babd5-2.webp",
+      "alt": "电动自行车场景视觉 2"
+    },
+    {
+      "id": "gallery-03",
+      "image": "/uploads/1792390335148-39ed7bcb-3.webp",
+      "alt": "电动自行车场景视觉 3"
+    },
+    {
+      "id": "gallery-04",
+      "image": "/uploads/1792390339085-858a82d0-4.webp",
+      "alt": "电动自行车场景视觉 4"
+    },
+    {
+      "id": "gallery-05",
+      "image": "/uploads/1792390343058-5244743d-5.webp",
+      "alt": "电动自行车场景视觉 5"
+    },
+    {
+      "id": "gallery-1792390345615",
+      "image": "/uploads/1792390351476-7d6728a8-6.webp",
+      "alt": "电动自行车场景视觉 6"
+    },
+    {
+      "id": "gallery-1792390353407",
+      "image": "/uploads/1792390359058-e912ef98-7.webp",
+      "alt": "电动自行车场景视觉 7"
+    },
+    {
+      "id": "gallery-1792390353855",
+      "image": "/uploads/1792390362520-58165b8b-8.webp",
+      "alt": "电动自行车场景视觉 8"
+    },
+    {
+      "id": "gallery-1792390354199",
+      "image": "/uploads/1792390365762-b2dea4da-9.webp",
+      "alt": "电动自行车场景视觉 9"
+    },
+    {
+      "id": "gallery-1792390354486",
+      "image": "/uploads/1792390369097-4d5c8f12-10.webp",
+      "alt": "电动自行车场景视觉 10"
+    }
+  ],
+  "social": {
+    "behance": "",
+    "instagram": ""
+  },
+  "projects": [
+    {
+      "id": "01",
+      "title": "电机动力 · 产品卖点视觉",
+      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
+      "type": "PRODUCT / E-COMMERCE",
+      "image": "/uploads/1792404722360-de353d8a-media.webp",
+      "url": "/project/01",
+      "background": "",
+      "process": "",
+      "outcome": ""
+    },
+    {
+      "id": "02",
+      "title": "户外骑行 · 功能信息设计",
+      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
+      "type": "PRODUCT / E-COMMERCE",
+      "image": "/uploads/1792404823975-04186c66-media.webp",
+      "url": "/project/02",
+      "background": "",
+      "process": "",
+      "outcome": ""
+    },
+    {
+      "id": "03",
+      "title": "山路骑行 · 场景主视觉",
+      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
+      "type": "PRODUCT / E-COMMERCE",
+      "image": "/uploads/1792404832480-0508733e-media.webp",
+      "url": "/project/03",
+      "background": "",
+      "process": "",
+      "outcome": ""
+    },
+    {
+      "id": "04",
+      "title": "智能骑行 · 功能展示",
+      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
+      "type": "PRODUCT / E-COMMERCE",
+      "image": "/uploads/1792404844917-5b5ea729-media.webp",
+      "url": "/project/04",
+      "background": "",
+      "process": "",
+      "outcome": ""
+    },
+    {
+      "id": "05",
+      "title": "多场景骑行 · 内容系列",
+      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
+      "type": "PRODUCT / E-COMMERCE",
+      "image": "/uploads/1792404859783-85b66dd8-media.webp",
+      "url": "/project/05",
+      "background": "",
+      "process": "",
+      "outcome": ""
+    },
+    {
+      "id": "06",
+      "title": "车身尺寸 · 购买信息设计",
+      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
+      "type": "PRODUCT / E-COMMERCE",
+      "image": "/uploads/1792404875926-29c06c0b-media.webp",
+      "url": "/project/06",
+      "background": "",
+      "process": "",
+      "outcome": ""
+    }
+  ],
+  "experience": [
+    {
+      "date": "时间待补充",
+      "company": "你的公司 / 工作室（示意）",
+      "role": "视觉设计师（示意）",
+      "note": "请填写真实任职时间、个人职责与代表成果；本条仅作排版示意。"
+    }
+  ],
+  "capabilities": [
+    {
+      "slug": "brand-systems",
+      "number": "01",
+      "icon": "strategy",
+      "title": "视觉概念与风格",
+      "en": "Brand Systems",
+      "layout": "brand-long",
+      "text": "产品、角色与人物视觉的风格探索。原包素材示意，不作为完整品牌系统案例。",
+      "cover": "/assets/project-aether.png",
+      "works": [
+        {
+          "id": "brand-01",
+          "title": "AETHER LAB",
+          "description": "未来护肤品牌视觉系统",
+          "image": "/assets/project-aether.png"
+        },
+        {
+          "id": "brand-02",
+          "title": "PERSONA / 26",
+          "description": "数字角色与品牌身份实验",
+          "image": "/assets/mascot-portrait.png"
+        },
+        {
+          "id": "brand-03",
+          "title": "人物视觉参考",
+          "description": "原包人物素材 · 待替换为你的作品",
+          "image": "/assets/portrait-lin.png"
+        }
+      ]
+    },
+    {
+      "slug": "ai-creative",
+      "number": "02",
+      "icon": "brain",
+      "title": "AI 创意工作流",
+      "en": "AI Creative",
+      "layout": "ai-large",
+      "text": "把生成式 AI 融入探索、提案与制作，让速度服务于更好的创意判断。 当前为示意素材，项目背景与制作职责待补充。",
+      "cover": "/assets/project-synthetic.png",
+      "works": [
+        {
+          "id": "ai-01",
+          "title": "SYNTHETIC TIDE",
+          "description": "生成式视觉实验计划",
+          "image": "/assets/project-synthetic.png"
+        },
+        {
+          "id": "ai-02",
+          "title": "CLOUD STUDIO",
+          "description": "AI 场景概念与角色叙事",
+          "image": "/assets/hero-cloud-ip05-v1.png"
+        },
+        {
+          "id": "ai-03",
+          "title": "DREAMSCAPE WORKFLOW",
+          "description": "从概念生成到场景精修的完整 AI 创意流程",
+          "image": "/assets/hero-cloud-studio.png"
+        }
+      ]
+    },
+    {
+      "slug": "3d-motion",
+      "number": "03",
+      "icon": "cube",
+      "title": "3D 视觉与动效",
+      "en": "3D & Motion",
+      "layout": "motion-grid",
+      "text": "用空间、材质和运动丰富品牌表达，构建更有沉浸感的数字视觉体验。 当前为示意素材，项目背景与制作职责待补充。",
+      "cover": "/assets/project-sonic.png",
+      "works": [
+        {
+          "id": "3d-01",
+          "title": "动态影像展示 01",
+          "description": "原包视频素材 · 项目名称、制作方式与个人职责待补充",
+          "image": "/uploads/1792475887962-c282217d-H9-1.webm"
+        },
+        {
+          "id": "3d-02",
+          "title": "动态影像展示 02",
+          "description": "原包视频素材 · 项目名称、制作方式与个人职责待补充",
+          "image": "/uploads/1792475913398-141e3d5a-H9.mp4"
+        },
+        {
+          "id": "3d-03",
+          "title": "动态影像展示 03",
+          "description": "原包视频素材 · 项目名称、制作方式与个人职责待补充",
+          "image": "/uploads/1792475928481-1b939861-media.mp4"
+        },
+        {
+          "id": "3d-04",
+          "title": "动态影像展示 04",
+          "description": "原包视频素材 · 项目名称、制作方式与个人职责待补充",
+          "image": "/uploads/1792475954218-96584433-media.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "ecommerce",
+      "number": "04",
+      "icon": "image",
+      "title": "电商建模渲染",
+      "en": "E-commerce Rendering",
+      "layout": "commerce-render",
+      "text": "围绕产品建模、材质、灯光与场景渲染，建立兼顾品牌质感与转化目标的电商视觉。 当前为示意素材，项目背景与制作职责待补充。",
+      "cover": "/uploads/1792404722360-de353d8a-media.webp",
+      "works": [
+        {
+          "id": "01",
+          "title": "电机动力 · 产品卖点视觉",
+          "description": "原包素材展示 · 项目背景与个人职责待补充",
+          "image": "/uploads/1792404722360-de353d8a-media.webp"
+        },
+        {
+          "id": "02",
+          "title": "户外骑行 · 功能信息设计",
+          "description": "原包素材展示 · 项目背景与个人职责待补充",
+          "image": "/uploads/1792404823975-04186c66-media.webp"
+        },
+        {
+          "id": "03",
+          "title": "山路骑行 · 场景主视觉",
+          "description": "原包素材展示 · 项目背景与个人职责待补充",
+          "image": "/uploads/1792404832480-0508733e-media.webp"
+        },
+        {
+          "id": "04",
+          "title": "智能骑行 · 功能展示",
+          "description": "原包素材展示 · 项目背景与个人职责待补充",
+          "image": "/uploads/1792404844917-5b5ea729-media.webp"
+        },
+        {
+          "id": "05",
+          "title": "多场景骑行 · 内容系列",
+          "description": "原包素材展示 · 项目背景与个人职责待补充",
+          "image": "/uploads/1792404859783-85b66dd8-media.webp"
+        },
+        {
+          "id": "06",
+          "title": "车身尺寸 · 购买信息设计",
+          "description": "原包素材展示 · 项目背景与个人职责待补充",
+          "image": "/uploads/1792404875926-29c06c0b-media.webp"
+        }
+      ]
+    }
+  ]
+}
