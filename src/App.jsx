@@ -19,6 +19,7 @@ import {
   Strategy,
 } from '@phosphor-icons/react'
 import defaultContent from '../data/content.json'
+import { CompleteCase, DigitalPanel, DigitalPage, BriefForm, SiteNotFound } from './components/SiteComplete.jsx'
 
 import FlipCard from './components/FlipCard.jsx'
 import TechText from './components/TechText.jsx'
@@ -223,7 +224,7 @@ function Experience({ profileData, mediaData, experienceData }) {
   return (
     <section className="experience section" id="experience">
       <div className="shell">
-        <SectionTitle eyebrow="ABOUT / EXPERIENCE" title="DESIGN PERSPECTIVE" description="从视觉设计到 AI 创意实践，用系统化思考建立清晰、独特且能够持续生长的品牌表达。" number="01" />
+        <SectionTitle eyebrow="ABOUT / APPROACH" title="DESIGN PERSPECTIVE" description="从视觉设计到 AI 创意实践，用系统化思考建立清晰、独特且能够持续生长的品牌表达。" number="01" />
         <div className="profile-grid">
           <div className="profile-image reveal">
             <FlipCard
@@ -252,7 +253,7 @@ function Experience({ profileData, mediaData, experienceData }) {
             <div className="profile-stats">
               <div><AnimatedNumber value={profileData.stats.experience} /><span>留下独特记忆</span></div><div><AnimatedNumber value={profileData.stats.projects} /><span>建立视觉系统</span></div><div><AnimatedNumber value={profileData.stats.brands} /><span>传递品牌气质</span></div>
             </div>
-            <div className="now-building"><span>NOW BUILDING</span><div><i>品牌视觉系统</i><i>AIGC 视觉工作流</i><i>电商内容体系</i><i>数字视觉表达</i></div></div>
+            <div className="now-building"><span>DESIGN FOCUS</span><div><i>品牌视觉系统</i><i>AIGC 视觉工作流</i><i>包装与应用设计</i><i>数字视觉表达</i></div></div>
           </div>
         </div>
       </div>
@@ -286,7 +287,7 @@ function Work({ projectData, email }) {
   return (
     <section className="work section" id="work">
       <div className="shell">
-        <SectionTitle eyebrow="SELECTED PROJECTS" title="SELECTED WORK" description="三组自主概念研究，从产品主视觉延展到字标、色彩与数字呈现。" number="03" action={{ label: '了解设计方向', href: '#capabilities' }} />
+        <SectionTitle eyebrow="SELECTED PROJECTS" title="SELECTED WORK" description="三组完整品牌概念：从识别系统、包装与空间应用，到可交互的数字页面。" number="03" action={{ label: '了解设计方向', href: '#capabilities' }} />
         <div className="project-index reveal" aria-label="精选作品概览">
           <span><b>{String(projectData.length).padStart(2, '0')}</b> 个精选案例</span>
           <span>品牌识别 / 艺术指导 / 产品视觉</span>
@@ -297,7 +298,7 @@ function Work({ projectData, email }) {
             <article className={`project project-${index + 1} reveal`} key={project.id}>
               <a className="project-entry" href={`/project/${project.id}`}>
                 <div className="project-image"><img loading="lazy" decoding="async" src={project.image} alt={`${project.title} 项目概念视觉`} /><span className="project-open" aria-hidden="true"><ImageSquare weight="bold" /></span><span className="project-id">{project.id}</span></div>
-                {project.premium && <div className="project-preview-strip" aria-hidden="true"><img loading="lazy" src={project.premium.print} alt="" /><span>FEATURED CASE<br /><b>从产品到完整品牌体验</b></span><img loading="lazy" src={project.premium.gallery} alt="" /></div>}<div className="project-copy"><div><span>{project.type}</span><h3>{project.title}</h3></div><div className="project-side"><p>{project.subtitle}</p><b>查看研究 <ArrowUpRight weight="bold" /></b></div></div>
+                {project.preview && <div className="project-preview-strip" aria-hidden="true"><img loading="lazy" src={project.preview.print} alt="" /><span>FEATURED CASE<br /><b>从产品到完整品牌体验</b></span><img loading="lazy" src={project.preview.gallery} alt="" /></div>}<div className="project-copy"><div><span>{project.type}</span><h3>{project.title}</h3></div><div className="project-side"><p>{project.subtitle}</p><b>查看研究 <ArrowUpRight weight="bold" /></b></div></div>
               </a>
             </article>
           ))}
@@ -350,7 +351,7 @@ function Capabilities({ capabilityData }) {
             const Icon = capabilityIcons[item.icon] || Strategy
             return (
             <a className="cap-card reveal" href={`/capability/${item.slug}`} key={item.slug}>
-              <div className="cap-card-cover"><img src={item.cover} alt="" /></div>
+              <div className="cap-card-cover"><img loading="lazy" decoding="async" src={item.cover} alt="" /></div>
               <div className="cap-card-top"><Icon size={32} weight="duotone" /><span>{item.number}</span></div>
               <div><span>{item.en}</span><h3>{item.title}</h3><p>{item.text}</p></div>
               <span className="cap-cta">查看该方向作品 <ArrowUpRight weight="bold" /></span>
@@ -364,15 +365,14 @@ function Capabilities({ capabilityData }) {
 }
 
 function Contact({ profileData, mediaData }) {
-  const [showNote, setShowNote] = useState(false)
+  const [showBrief, setShowBrief] = useState(false)
   return <footer className="contact" id="contact">
-    <img src={mediaData.contact || mediaData.hero} alt="" aria-hidden="true"/><div className="contact-shade"/>
-    <div className="shell contact-inner reveal">
-      <div className="contact-kicker"><span>CONTACT / NEXT CHAPTER</span><span>BRAND · VISUAL · DIGITAL</span></div>
-      <div className="contact-main">
-        <div className="contact-copy"><p>让下一个想法，成为值得记住的品牌。</p><h2>一起创造<span>SOMETHING DISTINCT.</span></h2><span className="contact-note">品牌识别 · 艺术指导 · 产品视觉 · 数字表达</span><button className="brand-contact-button" onClick={()=>setShowNote(!showNote)} aria-expanded={showNote}>联系与合作 <ArrowUpRight/></button>{showNote && <p className="brand-contact-note" role="status">联系方式待补充，暂未开放在线咨询。</p>}</div>
-        <div className="contact-details brand-contact-details"><span className="brand-monogram">B/V</span><p>独立视角。<br/>一致表达。</p><small>当前展示为自主概念研究<br/>AI 辅助视觉 / 非商业委托</small></div>
-      </div><div className="contact-bottom"><b>BRAND / VISUAL</b><span>SELECTED WORKS — 2026</span><span>SELF-INITIATED CONCEPTS</span><a href="#top">回到顶部 ↑</a></div>
+    <img loading="lazy" src={mediaData.contact || mediaData.hero} alt="" aria-hidden="true"/><div className="contact-shade"/>
+    <div className="shell contact-inner reveal"><div className="contact-kicker"><span>CONTACT / NEXT CHAPTER</span><span>BRAND · VISUAL · DIGITAL</span></div>
+      <div className="contact-main"><div className="contact-copy"><p>让下一个想法，成为值得记住的品牌。</p><h2>一起创造<span>SOMETHING DISTINCT.</span></h2><span className="contact-note">品牌识别 · 艺术指导 · 产品与包装 · 数字表达</span><button className="brand-contact-button" aria-controls="project-brief" onClick={() => setShowBrief(!showBrief)} aria-expanded={showBrief}>{showBrief ? '收起需求单' : '整理合作需求'} <ArrowUpRight/></button></div><div className="contact-details brand-contact-details"><span className="brand-monogram">B/V</span><p>独立视角。<br/>一致表达。</p><small>从清晰的项目目标开始<br/>支持生成并下载合作需求单</small></div></div>
+      <div id="project-brief" hidden={!showBrief}><BriefForm email={profileData.email} /></div>
+      <div className="contact-faq"><details><summary>作品集中的项目是什么性质？</summary><p>三个项目均为自主品牌概念研究。应用场景与产品图使用 AI 辅助生成，已在案例中说明；不代表真实客户委托、生产打样或商业投放。</p></details><details><summary>合作前可以准备哪些信息？</summary><p>品牌背景、目标受众、主要应用场景、现有素材、交付范围与时间预期。可使用上方需求单整理并保存。</p></details><details><summary>这些数字页面可以直接购买产品吗？</summary><p>数字页面用于展示品牌表达与交互设计，提供故事切换和响应式预览，不提供购买、支付或订单服务。</p></details></div>
+      <div className="contact-bottom"><b>BRAND / VISUAL</b><span>SELECTED WORKS — 2026</span><span>SELF-INITIATED CONCEPTS</span><a href="#top">回到顶部 ↑</a></div>
     </div>
   </footer>
 }
@@ -398,9 +398,15 @@ function Portfolio({ content }) {
   useLayoutEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const isMobile = window.matchMedia('(max-width: 760px)').matches
-    if (reduceMotion) {
+    if (reduceMotion || window.location.hash) {
       gsap.set('.opening-screen', { display: 'none' })
-      return undefined
+      const jumpToSection = () => {
+        const target = document.getElementById(window.location.hash.slice(1))
+        target?.scrollIntoView({ behavior: 'instant', block: 'start' })
+      }
+      const frame = requestAnimationFrame(jumpToSection)
+      window.addEventListener('load', jumpToSection, { once: true })
+      return () => { cancelAnimationFrame(frame); window.removeEventListener('load', jumpToSection) }
     }
 
     document.body.classList.add('is-opening')
@@ -578,69 +584,24 @@ function CapabilityMedia({ source, title }) {
   if (isVideoAsset(source)) {
     return <video src={source} aria-label={title} autoPlay muted loop playsInline preload="metadata" />
   }
-  return <img src={source} alt={title} />
+  return <img loading="lazy" decoding="async" src={source} alt={title} />
 }
 
 function CapabilityPage({ content, slug }) {
-  const pageRef = useRef(null)
-  const capability = content.capabilities?.find((item) => item.slug === slug)
-
-  useLayoutEffect(() => {
-    if (!capability) return undefined
-    window.scrollTo(0, 0)
-    document.title = `${capability.title} — ${content.profile.nameEn}`
-    const context = gsap.context(() => {
-      gsap.timeline({ defaults: { ease: 'power4.out' } })
-        .from('.capability-detail-nav', { y: -40, autoAlpha: 0, duration: 0.9 })
-        .from('.capability-detail-kicker', { y: 30, autoAlpha: 0, duration: 0.8 }, 0.15)
-        .from('.capability-detail-title span', { yPercent: 115, scaleY: 0.68, duration: 1.15 }, 0.22)
-        .from('.capability-detail-intro', { y: 32, autoAlpha: 0, duration: 0.8 }, 0.48)
-        .from('.capability-board-meta', { y: 28, autoAlpha: 0, duration: 0.8 }, 0.52)
-        .from('.capability-work-card', { y: 70, autoAlpha: 0, clipPath: 'inset(0 0 18% 0)', duration: 1, stagger: 0.13 }, 0.65)
-        .from('.capability-board-footer', { y: 20, autoAlpha: 0, duration: 0.7 }, 0.9)
-    }, pageRef)
-    return () => {
-      context.revert()
-      document.title = `${content.profile.nameEn} — 个人作品集`
-    }
-  }, [capability, content.profile.nameEn])
-
-  if (!capability) {
-    return <main className="capability-not-found"><span>404</span><h1>没有找到这个作品分类</h1><a href="/#capabilities"><ArrowLeft /> 返回首页</a></main>
-  }
-
-  return (
-    <div className="capability-detail" ref={pageRef}>
-      <header className="capability-detail-nav">
-        <a href="/#capabilities"><ArrowLeft weight="bold" /> 返回首页</a>
-        <span>{content.profile.nameEn.toUpperCase()} / SELECTED WORKS</span>
-        <a href="/#contact">联系我 <ArrowUpRight weight="bold" /></a>
-      </header>
-      <main className="capability-detail-main">
-        <section className="capability-detail-board" id="capability-works">
-          <div className="capability-board-head">
-            <div className="capability-detail-copy">
-            <div className="capability-detail-kicker"><span>{capability.number}</span><b>{capability.en}</b></div>
-            <h1 className="capability-detail-title"><span>{capability.title}</span></h1>
-            <p className="capability-detail-intro">{capability.text}</p>
-            </div>
-            <div className="capability-board-meta"><span>SELECTED WORKS</span><b>{String(capability.works.length).padStart(2, '0')}</b><p>ALL WORKS / ONE PAGE</p></div>
-          </div>
-          {capability.works.length ? (
-            <div className={`capability-work-grid layout-${capability.layout || 'commerce-render'}`}>
-              {capability.works.map((work, index) => (
-                <article className="capability-work-card" key={work.id || index}>
-                  <div><CapabilityMedia source={work.image} title={work.title} /><span>{String(index + 1).padStart(2, '0')}</span></div>
-                  <h3>{work.title}</h3><p>{work.description}</p><a className="capability-case-link" href={"/project/" + work.id}>查看完整品牌案例 <ArrowUpRight /></a>
-                </article>
-              ))}
-            </div>
-          ) : <div className="capability-empty">作品正在整理中</div>}
-          <footer className="capability-board-footer"><span>{content.profile.nameEn.toUpperCase()} / PORTFOLIO</span><a href="/#contact">发起合作 <ArrowUpRight weight="bold" /></a></footer>
-        </section>
-      </main>
-    </div>
-  )
+  const capability = content.capabilities?.find(item => item.slug === slug)
+  if (!capability) return <SiteNotFound />
+  return <div className="capability-detail curated-capability">
+    <header className="capability-detail-nav"><a href="/#capabilities"><ArrowLeft /> 返回首页</a><span>DESIGN DISCIPLINES / {capability.number}</span><a href="/#contact">合作需求 ↗</a></header>
+    <main className="shell curated-main"><div className="curated-heading"><span>{capability.number} / {capability.en}</span><h1>{capability.title}</h1><h2>{capability.headline}</h2><p>{capability.text}</p></div>
+      <nav className="discipline-nav" aria-label="切换设计分类">{content.capabilities.map(item => <a key={item.slug} aria-current={item.slug === slug ? 'page' : undefined} href={'/capability/' + item.slug}>{item.number} / {item.title}</a>)}</nav>
+      <div className="discipline-scope">{capability.scope.map((item,index) => <div key={item}><span>0{index+1}</span><h3>{item}</h3></div>)}</div>
+      <div className="curated-work-list">{capability.works.map((work,index) => <article className="curated-work" key={work.id}>
+        <div className="curated-work-top"><span>0{index+1} / CONCEPT STUDY</span><h2>{work.title}</h2><p>{work.description}</p><a href={'/project/'+work.id}>完整品牌案例 ↗</a></div>
+        {slug === 'ecommerce' ? <DigitalPanel project={content.projects.find(item => item.id === work.id)} /> : <div className="curated-media"><a href={'/project/'+work.id} aria-label={'查看 '+work.title+' 完整案例'}><CapabilityMedia source={work.image} title={work.title + ' 应用展示'}/></a><figure><CapabilityMedia source={work.secondary} title={work.title + ' 设计细节'}/><figcaption>{slug === 'brand-systems' ? 'SYSTEM / 字体与色彩规则' : 'DETAIL / 细节与视觉研究'}</figcaption></figure></div>}
+      </article>)}</div>
+      <footer className="curated-footer"><span>自主概念研究 · AI 辅助应用视觉 · 非商业委托</span><a href="/#contact">整理合作需求 ↗</a></footer>
+    </main>
+  </div>
 }
 
 function ArtworkViewer({ boards, title }) {
@@ -681,7 +642,7 @@ function DailyStillCase({ project, next }) {
         <div className="daily-eyebrow"><span>SELECTED CASE / 01</span><span>SELF-INITIATED · 2026</span></div>
         <div className="daily-title-row"><h1>Daily <em>Still.</em></h1><p>让日常，<br />慢下来。</p></div>
         <div className="daily-meta"><span>品牌识别 / 包装概念 / 艺术指导</span><span>自主概念研究 · AI 辅助效果图 · 未实物打样</span></div>
-        <nav className="case-sections" aria-label="案例目录"><a href="#daily-idea">01 品牌主张</a><a href="#daily-material">02 材质与细节</a><a href="#brand-system">03 识别与应用</a></nav>
+        <nav className="case-sections" aria-label="案例目录"><a href="#daily-idea">01 品牌主张</a><a href="#daily-material">02 材质与细节</a><a href="#brand-system">03 识别与应用</a><a href="#case-digital">04 数字体验</a></nav>
       </section>
       <figure className="daily-full-image"><img src={project.image} fetchPriority="high" width="1536" height="1024" alt="Daily Still 品牌包装家族概念效果图" /><figcaption>BRAND FAMILY / 包装、产品与纸品的统一表达</figcaption></figure>
       <section className="daily-story shell" id="daily-idea"><span className="daily-label">01 / THE IDEA</span><div><h2>少一点噪声，<br /><em>多一点感受。</em></h2><p>从一枚蓝色球形瓶盖出发，把“安静”转化为可被看见的品牌语言。温暖的纸张、克制的字标与缓慢展开的圆弧，让产品、包装和纸品共享同一种节奏。</p></div><aside><span>三个设计支点</span><p>01　以钴蓝建立记忆</p><p>02　以圆弧连接触点</p><p>03　以材质传递温度</p></aside></section>
@@ -689,7 +650,7 @@ function DailyStillCase({ project, next }) {
       <section className="daily-identity" id="brand-system"><div className="shell daily-identity-inner"><div><span className="daily-label">03 / A COHERENT LANGUAGE</span><h2>One circle.<br /><em>Many expressions.</em></h2><p>一组圆弧，从瓶盖轮廓延伸到包装、纸品和空间海报。衬线字标建立柔和的语气，清晰的信息网格保证每个应用都容易阅读。</p><div className="daily-colors"><span><i style={{background:'#263EA0'}} />COBALT / #263EA0</span><span><i style={{background:'#F0EDDF'}} />WARM WHITE / #F0EDDF</span><span><i style={{background:'#B3A68A'}} />STONE / #B3A68A</span></div></div><div className="daily-wordmark" aria-label="Daily Still 字标与圆弧图形"><span>Daily<br />Still.</span><div className="daily-orbits" aria-hidden="true"><i/><i/><i/><i/></div><small>QUIET BY NATURE.</small></div></div></section>
       <section className="daily-gallery shell"><div className="daily-gallery-heading"><span className="daily-label">04 / IN CONTEXT</span><h2>把同一种气质，<br />带进不同的场景。</h2><p>海报以字标、产品、图形三种表达并置，建立主次与节奏。图像是品牌概念的空间预演。</p></div><figure><img src={study.gallery} loading="lazy" width="1536" height="1024" alt="Daily Still 三幅海报在画廊中的概念应用效果" /><figcaption>POSTER SERIES / 空间应用概念效果</figcaption></figure></section>
       <section className="daily-detail-pair shell"><figure><img loading="lazy" src={study.original} alt="蓝色球形瓶盖与石材构图研究" /><figcaption>01 / 产品轮廓与材质研究</figcaption></figure><div><span className="daily-label">DESIGN RATIONALE</span><h2>从单一识别点，<br />到完整视觉秩序。</h2><p>球形瓶盖是最初的记忆点；圆弧与蓝色将这个记忆连接到更多触点。主视觉强调光与材质，应用稿强调信息与留白，让产品情绪与品牌识别彼此呼应。</p><p className="daily-disclosure">本项目为虚构品牌的自主概念研究。产品、包装、纸品与空间应用图为 AI 辅助效果图；字标与版式为视觉探索，不代表已生产、打样或投入商业使用。</p></div></section>
-      <section className="daily-support shell"><details><summary>查看基础规范与平面设计稿 <span>＋</span></summary><ArtworkViewer boards={project.system.boards} title={project.title} /></details></section>
+      <section className="daily-digital shell" id="case-digital"><DigitalPanel project={project} /></section><section className="daily-support shell"><details><summary>查看基础规范与平面设计稿 <span>＋</span></summary><ArtworkViewer boards={project.system.boards} title={project.title} /></details></section>
       <nav className="shell case-next daily-next" aria-label="浏览其他案例"><a className="case-back" href="/#work">← 全部作品</a><a className="case-next-link" href={'/project/' + next.id}><img loading="lazy" src={next.image} alt="" /><span><small>NEXT PROJECT / 下一案例</small><b>{next.title}</b></span><ArrowUpRight /></a></nav>
     </main>
   </div>
@@ -700,6 +661,7 @@ function ProjectPage({ content, id }) {
   const project = content.projects[index]
   if (!project) return <main className="capability-not-found"><h1>作品不存在</h1><a href="/#work">返回作品集</a></main>
   const next = content.projects[(index + 1) % content.projects.length]
+  if (project.complete) return <CompleteCase project={project} next={next} Viewer={ArtworkViewer} />
   if (project.premium) return <DailyStillCase project={project} next={next} />
   const notes = [ ['01', '项目背景', project.background], ['02', '视觉策略', project.process], ['03', '概念延展', project.outcome] ]
   return <div className="project-detail-page">
@@ -722,20 +684,26 @@ function ProjectPage({ content, id }) {
 function App() {
   const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
   const isAdmin = pathname === '/admin'
+  const digitalMatch = pathname.match(/^\/digital\/([^/]+)$/)
   const projectMatch = pathname.match(/^\/project\/([^/]+)$/)
   const capabilityMatch = pathname.match(/^\/capability\/([^/]+)$/)
   const [content, setContent] = useState(defaultContent)
   const [ready, setReady] = useState(true)
 
   useEffect(() => {
+    const selectedProject = content.projects.find(item => pathname === '/project/' + item.id || pathname === '/digital/' + item.id)
+    const selectedCapability = content.capabilities.find(item => pathname === '/capability/' + item.slug)
+    document.title = selectedProject ? selectedProject.title + ' — Brand Visual' : selectedCapability ? selectedCapability.title + ' — Brand Visual' : 'Brand Visual — 品牌视觉作品集'
     if (isAdmin) return
     setContent(defaultContent)
   }, [isAdmin])
 
-  if (isAdmin) return <main className="capability-not-found"><h1>作品集展示站</h1><p>内容通过本地管理后台维护。</p><a href="/">返回首页</a></main>
+  if (isAdmin) return <SiteNotFound />
+  if (digitalMatch) return <DigitalPage project={content.projects.find(item => item.id === decodeURIComponent(digitalMatch[1]))} />
   if (!ready) return <div className="portfolio-loading"><span>PORTFOLIO</span><i /></div>
   if (projectMatch) return <ProjectPage content={content} id={decodeURIComponent(projectMatch[1])} />
   if (capabilityMatch) return <CapabilityPage content={content} slug={decodeURIComponent(capabilityMatch[1])} />
+  if (pathname !== '/') return <SiteNotFound />
   return <Portfolio content={content} />
 }
 

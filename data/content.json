@@ -5,10 +5,10 @@
     "heroRole": "IDENTITY · ART DIRECTION · DIGITAL",
     "services": "品牌识别 / 产品视觉 / 数字表达",
     "location": "独立概念研究",
-    "address": "个人资料待补充",
+    "address": "独立视觉创作",
     "email": "",
     "phone": "",
-    "intro": "从品牌的独特之处出发，建立清晰、有辨识度的视觉语言。在字体、色彩、图像与空间之间，寻找一致而有张力的表达。这里先呈现三组自主概念研究，探索品牌视觉如何从一个想法延展到不同触点。",
+    "intro": "以品牌识别为起点，把字体、色彩、图像与应用组织成统一的视觉语言。关注产品本身的特征，也关心它出现在包装、海报与屏幕上的样子。这里用三组独立概念项目，呈现从方向探索、视觉系统到应用落地的完整思考。",
     "stats": {
       "experience": "识别",
       "projects": "秩序",
@@ -16,41 +16,41 @@
     }
   },
   "media": {
-    "hero": "/original/cloud-studio-v2.png",
-    "portrait": "/original/identity-01.svg",
-    "contact": "/original/cloud-studio-v2.png",
+    "hero": "/original/cloud-studio-v2.webp",
+    "portrait": "/original/designer-card.svg",
+    "contact": "/original/cloud-studio-v2.webp",
     "wechatQr": ""
   },
   "heroGallery": [
     {
-      "id": "01-photo",
-      "image": "/original/daily-campaign-v2.png",
-      "alt": "DAILY STILL · 产品主视觉"
+      "id": "01-family",
+      "image": "/original/daily-campaign-v2.webp",
+      "alt": "DAILY STILL · 品牌包装家族"
     },
     {
-      "id": "daily-print",
-      "image": "/original/daily-print-v2.png",
-      "alt": "DAILY STILL · 纸品与印刷工艺概念"
+      "id": "02-family",
+      "image": "/original/sound-family.webp",
+      "alt": "BETWEEN SOUND · 品牌包装家族"
     },
     {
-      "id": "02-photo",
-      "image": "/original/between-sound.png",
-      "alt": "BETWEEN SOUND · 产品主视觉"
+      "id": "03-family",
+      "image": "/original/green-family.webp",
+      "alt": "A SIP OF GREEN · 品牌包装家族"
     },
     {
-      "id": "02-identity",
-      "image": "/original/identity-02.svg",
-      "alt": "BETWEEN SOUND · 字标与色彩研究"
+      "id": "01-detail",
+      "image": "/original/daily-print-v2.webp",
+      "alt": "DAILY STILL · 材质与纸品研究"
     },
     {
-      "id": "03-photo",
-      "image": "/original/sip-of-green.png",
-      "alt": "A SIP OF GREEN · 产品主视觉"
+      "id": "02-detail",
+      "image": "/original/sound-detail.webp",
+      "alt": "BETWEEN SOUND · 材质与纸品研究"
     },
     {
-      "id": "03-identity",
-      "image": "/original/identity-03.svg",
-      "alt": "A SIP OF GREEN · 字标与色彩研究"
+      "id": "03-detail",
+      "image": "/original/green-detail.webp",
+      "alt": "A SIP OF GREEN · 材质与纸品研究"
     }
   ],
   "social": {
@@ -63,7 +63,7 @@
       "title": "DAILY STILL",
       "subtitle": "日常留白 / 品牌识别与包装概念",
       "type": "BRAND CONCEPT / 2026",
-      "image": "/original/daily-campaign-v2.png",
+      "image": "/original/daily-campaign-v2.webp",
       "url": "/project/01",
       "background": "如何让一件没有复杂装饰的日常用品被记住？这次研究选择以球形瓶盖作为单一识别点，用温暖石材和冷调蓝色形成对照，探索安静但不平淡的产品视觉。",
       "process": "只留一个记忆点：把色彩集中在球形瓶盖，瓶身维持低饱和。视线先识别蓝色，再回到产品轮廓。 用光线组织空间：以侧向光和玻璃折射建立画面方向，留白提供呼吸感，不堆叠与产品无关的道具。 延展为展示语言：字标与色板沿用暖白和钴蓝，以圆形符号连接包装轮廓和身份探索，形成统一的品牌方向。",
@@ -115,21 +115,30 @@
         ]
       },
       "premium": {
-        "print": "/original/daily-print-v2.png",
-        "gallery": "/original/daily-gallery-v2.png",
-        "original": "/original/daily-still.png"
+        "print": "/original/daily-print-v2.webp",
+        "gallery": "/original/daily-gallery-v2.webp",
+        "original": "/original/daily-still.webp"
+      },
+      "preview": {
+        "print": "/original/daily-print-v2.webp",
+        "gallery": "/original/daily-gallery-v2.webp",
+        "original": "/original/daily-still.webp"
+      },
+      "digital": {
+        "headline": "A quieter everyday.",
+        "subline": "给日常留白，让感受发生。"
       }
     },
     {
       "id": "02",
       "title": "BETWEEN SOUND",
-      "subtitle": "声场之间 / 自主概念研究",
+      "subtitle": "声场之间 / 品牌系统与应用概念",
       "type": "BRAND CONCEPT / 2026",
-      "image": "/original/between-sound.png",
+      "image": "/original/sound-family.webp",
       "url": "/project/02",
       "background": "音频产品不必总用黑色背景和声波图案表达科技感。这次从金属表面、重复孔阵和一条线缆出发，用温暖单色与轻微悬浮感探索另一种声音想象。",
       "process": "从结构中找节奏：让网孔阵列和圆形旋钮成为画面细节，用秩序和疏密传达精密感。 以静态暗示运动：产品斜置，线缆形成弧线，台面阴影承接主体。悬浮是概念视觉表达，不是产品功能。 控制视觉噪声：不加入性能数字、虚构卖点或多余标签，集中研究产品姿态与材质表现。",
-      "outcome": "本次概念研究包含产品主视觉、字体与色彩规范、辅助图形、海报、包装平面稿与数字页面提案。产品图由 AI 辅助生成，其余展示为矢量设计研究；未进行实物打样或商业投放。",
+      "outcome": "完成品牌识别方向、产品与包装家族概念、纸品材质研究、空间海报和数字页面演示。应用图为 AI 辅助概念效果，未实物打样或商业投放。",
       "identity": "/original/identity-02.svg",
       "system": {
         "ink": "#CF682D",
@@ -175,18 +184,42 @@
             "note": "将同一套字体、色彩与图形延展到网页首屏；展示为静态视觉提案。"
           }
         ]
+      },
+      "complete": {
+        "theme": "sound",
+        "tagline": "让声音，拥有形状。",
+        "idea": "让秩序产生节奏。",
+        "body": "金属孔阵、旋钮与线缆，是这组视觉的起点。把产品结构中的重复关系提炼成斜向线阵，用暖橙和炭黑表达精密、能量与实验性。",
+        "keywords": "孔阵 / 节奏 / 工业材质",
+        "detailTitle": "从产品结构中，找到品牌的节拍。",
+        "detailBody": "包装的斜向线阵呼应网孔，粗体字标承担第一层识别。纸面与金属形成触觉对照，让技术产品也拥有鲜明的情绪。",
+        "spaceTitle": "把视觉，放进城市声场。",
+        "spaceBody": "海报以字标、产品与节奏图形交替展开，在工业空间中形成一套清晰的视觉语言。",
+        "english": "FIND YOUR FREQUENCY",
+        "systemTitle": "一组线条，多种节拍。",
+        "detail": "/original/sound-detail.webp",
+        "space": "/original/sound-space.webp",
+        "original": "/original/between-sound.webp"
+      },
+      "preview": {
+        "print": "/original/sound-detail.webp",
+        "gallery": "/original/sound-space.webp"
+      },
+      "digital": {
+        "headline": "Feel the space between.",
+        "subline": "从精密结构，到鲜明表达。"
       }
     },
     {
       "id": "03",
       "title": "A SIP OF GREEN",
-      "subtitle": "一口青意 / 自主概念研究",
+      "subtitle": "一口青意 / 品牌系统与应用概念",
       "type": "BRAND CONCEPT / 2026",
-      "image": "/original/sip-of-green.png",
+      "image": "/original/green-family.webp",
       "url": "/project/03",
       "background": "如果不依赖大段广告文案，一张画面如何传达口味联想？这次以梨的颜色和形态为线索，用深浅绿色、金属冷凝水珠和透光玻璃建立植物饮品的视觉概念。",
       "process": "以实物暗示风味：用梨片作为口味线索，避免用抽象光效替代产品情境。这不是成分或营养承诺。 建立层次而非堆色：背景、玻璃与罐体均在绿色谱系内，通过明度和透明度变化区分前后关系。 保留身份设计空间：包装暂不添加真实品牌标识，作为概念主视觉研究，为后续命名与包装系统设计留出空间。",
-      "outcome": "本次概念研究包含产品主视觉、字体与色彩规范、辅助图形、海报、包装平面稿与数字页面提案。产品图由 AI 辅助生成，其余展示为矢量设计研究；未进行实物打样或商业投放。",
+      "outcome": "完成品牌识别方向、产品与包装家族概念、纸品材质研究、空间海报和数字页面演示。应用图为 AI 辅助概念效果，未实物打样或商业投放。",
       "identity": "/original/identity-03.svg",
       "system": {
         "ink": "#284632",
@@ -232,6 +265,30 @@
             "note": "将同一套字体、色彩与图形延展到网页首屏；展示为静态视觉提案。"
           }
         ]
+      },
+      "complete": {
+        "theme": "green",
+        "tagline": "让日常，多一口青意。",
+        "idea": "一口清新，一种自然秩序。",
+        "body": "以梨的色彩与形态为线索，将清新感转换成深浅绿的层次。成对叶形连接罐体、提盒和海报，衬线字标为轻快的饮品表达保留温度。",
+        "keywords": "叶形 / 色阶 / 自然光",
+        "detailTitle": "在细节里，保留自然的呼吸。",
+        "detailBody": "用深绿承担识别与信息，用浅绿保留轻盈。包装折线、哑光罐体与纸面纹理共同形成丰富但克制的材质关系。",
+        "spaceTitle": "从一只罐，到一个轻盈的场景。",
+        "spaceBody": "让字标、产品静物与叶形图案在空间中交替出现，建立一套可以跨越包装和数字页面的品牌表达。",
+        "english": "A LITTLE GREENER",
+        "systemTitle": "一片叶形，连接每个触点。",
+        "detail": "/original/green-detail.webp",
+        "space": "/original/green-space.webp",
+        "original": "/original/sip-of-green.webp"
+      },
+      "preview": {
+        "print": "/original/green-detail.webp",
+        "gallery": "/original/green-space.webp"
+      },
+      "digital": {
+        "headline": "A little greener, every day.",
+        "subline": "把植物的轻盈，带进日常。"
       }
     }
   ],
@@ -263,27 +320,36 @@
       "title": "品牌识别研究",
       "en": "Brand Identity",
       "layout": "ai-large",
-      "text": "字标、色彩与基础秩序，让品牌拥有可辨识的视觉起点。",
-      "cover": "/original/system-01.svg",
+      "text": "识别系统负责让品牌在不同尺寸与媒介中仍然被认出来。这里展示三组概念如何从产品特征中提炼图形、色彩和字体规则。",
+      "cover": "/original/daily-print-v2.webp",
       "works": [
         {
           "id": "01",
           "title": "DAILY STILL",
-          "description": "字体、色板与辅助图形规范",
-          "image": "/original/system-01.svg"
+          "description": "字标、图形与材质的统一表达",
+          "image": "/original/daily-print-v2.webp",
+          "secondary": "/original/system-01.svg"
         },
         {
           "id": "02",
           "title": "BETWEEN SOUND",
-          "description": "字体、色板与辅助图形规范",
-          "image": "/original/system-02.svg"
+          "description": "字标、图形与材质的统一表达",
+          "image": "/original/sound-detail.webp",
+          "secondary": "/original/system-02.svg"
         },
         {
           "id": "03",
           "title": "A SIP OF GREEN",
-          "description": "字体、色板与辅助图形规范",
-          "image": "/original/system-03.svg"
+          "description": "字标、图形与材质的统一表达",
+          "image": "/original/green-detail.webp",
+          "secondary": "/original/system-03.svg"
         }
+      ],
+      "headline": "从一个记忆点，建立一套语言。",
+      "scope": [
+        "字标与字体层级",
+        "核心色彩与辅助图形",
+        "跨触点的一致性"
       ]
     },
     {
@@ -293,27 +359,36 @@
       "title": "艺术指导",
       "en": "Art Direction",
       "layout": "ai-large",
-      "text": "以海报构图、图形节奏与配色，建立各自鲜明的品牌情绪。",
-      "cover": "/original/daily-gallery-v2.png",
+      "text": "艺术指导把品牌气质转化为可以看见的场景：日常留白的温度、声场之间的力度、一口青意的轻盈，各自拥有明确的图像逻辑。",
+      "cover": "/original/daily-gallery-v2.webp",
       "works": [
         {
           "id": "01",
           "title": "DAILY STILL",
-          "description": "品牌海报空间应用 / AI 辅助概念效果",
-          "image": "/original/daily-gallery-v2.png"
+          "description": "系列海报与空间应用 / AI 辅助概念效果",
+          "image": "/original/daily-gallery-v2.webp",
+          "secondary": "/original/daily-still.webp"
         },
         {
           "id": "02",
           "title": "BETWEEN SOUND",
-          "description": "品牌海报与构图节奏研究",
-          "image": "/original/poster-02.svg"
+          "description": "系列海报与空间应用 / AI 辅助概念效果",
+          "image": "/original/sound-space.webp",
+          "secondary": "/original/between-sound.webp"
         },
         {
           "id": "03",
           "title": "A SIP OF GREEN",
-          "description": "品牌海报与构图节奏研究",
-          "image": "/original/poster-03.svg"
+          "description": "系列海报与空间应用 / AI 辅助概念效果",
+          "image": "/original/green-space.webp",
+          "secondary": "/original/sip-of-green.webp"
         }
+      ],
+      "headline": "让每个画面，都说同一种语言。",
+      "scope": [
+        "构图与视线引导",
+        "光线与材质方向",
+        "系列海报与空间呈现"
       ]
     },
     {
@@ -323,27 +398,36 @@
       "title": "产品与包装视觉",
       "en": "Product & Packaging",
       "layout": "ai-large",
-      "text": "从产品主视觉到包装平面概念，让材质、信息与品牌识别形成一致表达。",
-      "cover": "/original/daily-campaign-v2.png",
+      "text": "以产品作为主角，研究包装、纸品与图像如何共同建立品牌感。以下为 AI 辅助应用效果与平面设计研究，不代表已量产或完成实物打样。",
+      "cover": "/original/daily-campaign-v2.webp",
       "works": [
         {
           "id": "01",
           "title": "DAILY STILL",
-          "description": "包装家族概念效果 / AI 辅助视觉",
-          "image": "/original/daily-campaign-v2.png"
+          "description": "包装家族与纸品概念 / AI 辅助效果图",
+          "image": "/original/daily-campaign-v2.webp",
+          "secondary": "/original/daily-print-v2.webp"
         },
         {
           "id": "02",
           "title": "BETWEEN SOUND",
-          "description": "包装平面概念 / 非实物样品",
-          "image": "/original/packaging-02.svg"
+          "description": "包装家族与纸品概念 / AI 辅助效果图",
+          "image": "/original/sound-family.webp",
+          "secondary": "/original/sound-detail.webp"
         },
         {
           "id": "03",
           "title": "A SIP OF GREEN",
-          "description": "包装平面概念 / 非实物样品",
-          "image": "/original/packaging-03.svg"
+          "description": "包装家族与纸品概念 / AI 辅助效果图",
+          "image": "/original/green-family.webp",
+          "secondary": "/original/green-detail.webp"
         }
+      ],
+      "headline": "从产品形态，到完整包装体验。",
+      "scope": [
+        "包装家族关系",
+        "纸品与工艺概念",
+        "产品视觉与场景应用"
       ]
     },
     {
@@ -353,27 +437,36 @@
       "title": "数字表达",
       "en": "Digital Expression",
       "layout": "ai-large",
-      "text": "将品牌系统延展到数字页面，研究信息层级与首屏表达；展示为静态视觉提案。",
-      "cover": "/original/digital-01.svg",
+      "text": "三组品牌均提供可操作的数字视觉演示，可切换产品故事与品牌首页，并查看移动端构图。演示用于设计展示，不提供交易功能。",
+      "cover": "/original/daily-campaign-v2.webp",
       "works": [
         {
           "id": "01",
           "title": "DAILY STILL",
-          "description": "数字页面视觉提案 / 静态研究",
-          "image": "/original/digital-01.svg"
+          "description": "可交互品牌页面 / 桌面与手机布局",
+          "image": "/original/daily-campaign-v2.webp",
+          "secondary": "/original/daily-gallery-v2.webp"
         },
         {
           "id": "02",
           "title": "BETWEEN SOUND",
-          "description": "数字页面视觉提案 / 静态研究",
-          "image": "/original/digital-02.svg"
+          "description": "可交互品牌页面 / 桌面与手机布局",
+          "image": "/original/sound-family.webp",
+          "secondary": "/original/sound-space.webp"
         },
         {
           "id": "03",
           "title": "A SIP OF GREEN",
-          "description": "数字页面视觉提案 / 静态研究",
-          "image": "/original/digital-03.svg"
+          "description": "可交互品牌页面 / 桌面与手机布局",
+          "image": "/original/green-family.webp",
+          "secondary": "/original/green-space.webp"
         }
+      ],
+      "headline": "让品牌走进可以操作的页面。",
+      "scope": [
+        "响应式页面布局",
+        "产品故事与交互状态",
+        "视觉系统到屏幕的延展"
       ]
     }
   ]
