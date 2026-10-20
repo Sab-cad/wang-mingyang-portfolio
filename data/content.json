@@ -8,7 +8,7 @@
     "address": "独立视觉创作",
     "email": "",
     "phone": "",
-    "intro": "关注品牌如何被看见，也关注它为什么这样呈现。从字标、图形到包装与屏幕，以清晰的规则连接不同触点。作品集收录三个品牌系统与三组文化、编辑、音乐方向的独立设计研究。",
+    "intro": "关注品牌如何被看见，也关注它为什么这样呈现。从字标、图形到包装、纸品与屏幕，以清晰的规则连接不同触点。作品集收录六个品牌系统与三组文化、编辑、音乐方向的独立设计研究。",
     "stats": {
       "experience": "识别",
       "projects": "秩序",
@@ -51,6 +51,21 @@
       "id": "afterhours",
       "image": "/practice/afterhours-0.svg",
       "alt": "AFTER HOURS 音乐视觉"
+    },
+    {
+      "id": "noon-table",
+      "image": "/collections/noon-table.webp",
+      "alt": "NOON TABLE 品牌应用概念"
+    },
+    {
+      "id": "fold-form",
+      "image": "/collections/fold-form.webp",
+      "alt": "FOLD / FORM 品牌应用概念"
+    },
+    {
+      "id": "mora",
+      "image": "/collections/mora.webp",
+      "alt": "MORA 品牌应用概念"
     }
   ],
   "social": {

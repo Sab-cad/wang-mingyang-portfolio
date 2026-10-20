@@ -28,3 +28,12 @@
 新增 `/study/tidal`、`/study/field`、`/study/afterhours`。九张原创矢量海报保存在 `public/practice/`，可从案例页下载 SVG。它们分别为虚构文化计划、植物观察刊物、独立音乐主题，不是真实活动、出版或发行项目。
 
 `src/components/BrandPractice.jsx` 中的 `studies` 维护各独立研究文案，`definitions` 维护三个品牌的字标、图形、配色比例和应用规则。识别板支持网格切换以及包装、卡片、海报三种平面应用。原有三个品牌的重复基础规范段落已移除。新应用展示为网页中的平面设计编排，不是实际生产打样。
+
+
+## 第十版：新增三个品牌世界与作品总览
+
+新增 `/work`：全部 9 个项目，可按品牌系统（6 个）与平面研究（3 个）筛选。
+
+新增 `/collection/noon-table`（餐饮）、`/collection/fold-form`（建筑出版）、`/collection/mora`（花艺零售）。每个案例包含独立 AI 辅助场景图、品牌逻辑、字标与图形、色板、可交互平面应用，以及可下载的身份规范与海报 SVG。菜单、出版章节、祝福卡均为设计展示，无交易功能。
+
+文案在 `data/collections.json`，组件在 `src/components/Collections.jsx`，样式在 `Collections.css`。网页素材在 `public/collections/`；生成原图另存于相邻的 `../portfolio-assets/collections/`。生成提示词与方式记录在 `IMAGE-PROMPTS-v10.md`。所有品牌均为虚构的自主概念，无真实客户背书。

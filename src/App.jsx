@@ -21,6 +21,7 @@ import {
 import defaultContent from '../data/content.json'
 import { CompleteCase, DigitalPanel, DigitalPage, BriefForm, SiteNotFound } from './components/SiteComplete.jsx'
 
+import { CollectionArchive, CollectionPage, WorkIndex, collections } from './components/Collections.jsx'
 import { IdentityStudy, StudyArchive, StudyPage, studies } from './components/BrandPractice.jsx'
 
 import FlipCard from './components/FlipCard.jsx'
@@ -289,7 +290,7 @@ function Work({ projectData, email }) {
   return (
     <section className="work section" id="work">
       <div className="shell">
-        <SectionTitle eyebrow="SELECTED PROJECTS" title="SELECTED WORK" description="三个品牌系统，三组独立平面命题。从产品的识别，到文化、编辑与音乐的视觉表达。" number="03" action={{ label: '了解设计方向', href: '#capabilities' }} />
+        <SectionTitle eyebrow="SELECTED PROJECTS" title="SELECTED WORK" description="六个品牌系统，三组独立平面研究。覆盖产品、餐饮、出版、花艺、文化与音乐等不同命题。" number="03" action={{ label: '全部 9 个项目', href: '/work' }} />
         <div className="project-index reveal" aria-label="精选作品概览">
           <span><b>{String(projectData.length).padStart(2, '0')}</b> 个精选案例</span>
           <span>品牌识别 / 艺术指导 / 产品视觉</span>
@@ -305,7 +306,7 @@ function Work({ projectData, email }) {
             </article>
           ))}
         </div>
-        <StudyArchive />
+        <CollectionArchive /><StudyArchive />
       </div>
     </section>
   )
@@ -374,7 +375,7 @@ function Contact({ profileData, mediaData }) {
     <div className="shell contact-inner reveal"><div className="contact-kicker"><span>CONTACT / NEXT CHAPTER</span><span>BRAND · VISUAL · DIGITAL</span></div>
       <div className="contact-main"><div className="contact-copy"><p>让下一个想法，成为值得记住的品牌。</p><h2>一起创造<span>SOMETHING DISTINCT.</span></h2><span className="contact-note">品牌识别 · 艺术指导 · 产品与包装 · 数字表达</span><button className="brand-contact-button" aria-controls="project-brief" onClick={() => setShowBrief(!showBrief)} aria-expanded={showBrief}>{showBrief ? '收起需求单' : '整理合作需求'} <ArrowUpRight/></button></div><div className="contact-details brand-contact-details"><span className="brand-monogram">B/V</span><p>独立视角。<br/>一致表达。</p><small>从清晰的项目目标开始<br/>支持生成并下载合作需求单</small></div></div>
       <div id="project-brief" hidden={!showBrief}><BriefForm email={profileData.email} /></div>
-      <div className="contact-faq"><details><summary>作品集中的项目是什么性质？</summary><p>三个项目均为自主品牌概念研究。应用场景与产品图使用 AI 辅助生成，已在案例中说明；不代表真实客户委托、生产打样或商业投放。</p></details><details><summary>合作前可以准备哪些信息？</summary><p>品牌背景、目标受众、主要应用场景、现有素材、交付范围与时间预期。可使用上方需求单整理并保存。</p></details><details><summary>这些数字页面可以直接购买产品吗？</summary><p>数字页面用于展示品牌表达与交互设计，提供故事切换和响应式预览，不提供购买、支付或订单服务。</p></details></div>
+      <div className="contact-faq"><details><summary>作品集中的项目是什么性质？</summary><p>九个项目均为自主概念研究，涵盖六个品牌系统与三组平面设计系列。品牌应用场景与产品图使用 AI 辅助生成，平面稿为矢量设计；不代表真实客户委托、生产打样或商业投放。</p></details><details><summary>合作前可以准备哪些信息？</summary><p>品牌背景、目标受众、主要应用场景、现有素材、交付范围与时间预期。可使用上方需求单整理并保存。</p></details><details><summary>这些数字页面可以直接购买产品吗？</summary><p>数字页面用于展示品牌表达与交互设计，提供故事切换和响应式预览，不提供购买、支付或订单服务。</p></details></div>
       <div className="contact-bottom"><b>BRAND / VISUAL</b><span>SELECTED WORKS — 2026</span><span>SELF-INITIATED CONCEPTS</span><a href="#top">回到顶部 ↑</a></div>
     </div>
   </footer>
@@ -603,6 +604,7 @@ function CapabilityPage({ content, slug }) {
         <div className="curated-work-top"><span>0{index+1} / CONCEPT STUDY</span><h2>{work.title}</h2><p>{work.description}</p><a href={'/project/'+work.id}>完整品牌案例 ↗</a></div>
         {slug === 'brand-systems' ? <IdentityStudy project={content.projects.find(item => item.id === work.id)} compact /> : slug === 'ecommerce' ? <DigitalPanel project={content.projects.find(item => item.id === work.id)} /> : <div className="curated-media"><a href={'/project/'+work.id} aria-label={'查看 '+work.title+' 完整案例'}><CapabilityMedia source={work.image} title={work.title + ' 应用展示'}/></a><figure><CapabilityMedia source={work.secondary} title={work.title + ' 设计细节'}/><figcaption>{slug === 'brand-systems' ? 'SYSTEM / 字体与色彩规则' : 'DETAIL / 细节与视觉研究'}</figcaption></figure></div>}
       </article>)}</div>
+      {slug !== 'ecommerce' && <CollectionArchive compact />}
       <footer className="curated-footer"><span>自主概念研究 · AI 辅助应用视觉 · 非商业委托</span><a href="/#contact">整理合作需求 ↗</a></footer>
     </main>
   </div>
@@ -687,6 +689,7 @@ function ProjectPage({ content, id }) {
 function App() {
   const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
   const isAdmin = pathname === '/admin'
+  const collectionMatch = pathname.match(/^\/collection\/([^/]+)$/)
   const studyMatch = pathname.match(/^\/study\/([^/]+)$/)
   const digitalMatch = pathname.match(/^\/digital\/([^/]+)$/)
   const projectMatch = pathname.match(/^\/project\/([^/]+)$/)
@@ -698,7 +701,8 @@ function App() {
     const selectedProject = content.projects.find(item => pathname === '/project/' + item.id || pathname === '/digital/' + item.id)
     const selectedCapability = content.capabilities.find(item => pathname === '/capability/' + item.slug)
     const selectedStudy = studies.find(item => pathname === '/study/' + item.slug)
-    document.title = selectedStudy ? selectedStudy.name + ' — Visual Study' : selectedProject ? selectedProject.title + ' — Brand Visual' : selectedCapability ? selectedCapability.title + ' — Brand Visual' : 'Brand Visual — 品牌视觉作品集'
+    const selectedCollection = collections.find(item => pathname === '/collection/' + item.slug)
+    document.title = selectedCollection ? selectedCollection.name + ' — Brand Study' : pathname === '/work' ? '全部作品 — Brand Visual' : selectedStudy ? selectedStudy.name + ' — Visual Study' : selectedProject ? selectedProject.title + ' — Brand Visual' : selectedCapability ? selectedCapability.title + ' — Brand Visual' : 'Brand Visual — 品牌视觉作品集'
     if (isAdmin) return
     setContent(defaultContent)
   }, [isAdmin])
@@ -711,6 +715,8 @@ function App() {
     return () => { cancelAnimationFrame(frame); window.removeEventListener('load', revealSection) }
   }, [pathname])
 
+  if (pathname === '/work') return <WorkIndex projects={content.projects} />
+  if (collectionMatch) return collections.some(item => item.slug === collectionMatch[1]) ? <CollectionPage slug={collectionMatch[1]} /> : <SiteNotFound />
   if (studyMatch) return studies.some(item => item.slug === studyMatch[1]) ? <StudyPage slug={studyMatch[1]} /> : <SiteNotFound />
   if (isAdmin) return <SiteNotFound />
   if (digitalMatch) return <DigitalPage project={content.projects.find(item => item.id === decodeURIComponent(digitalMatch[1]))} />
