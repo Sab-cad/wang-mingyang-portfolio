@@ -21,6 +21,8 @@ import {
 import defaultContent from '../data/content.json'
 import { CompleteCase, DigitalPanel, DigitalPage, BriefForm, SiteNotFound } from './components/SiteComplete.jsx'
 
+import { IdentityStudy, StudyArchive, StudyPage, studies } from './components/BrandPractice.jsx'
+
 import FlipCard from './components/FlipCard.jsx'
 import TechText from './components/TechText.jsx'
 import CircularCarousel from './components/CircularCarousel.jsx'
@@ -287,7 +289,7 @@ function Work({ projectData, email }) {
   return (
     <section className="work section" id="work">
       <div className="shell">
-        <SectionTitle eyebrow="SELECTED PROJECTS" title="SELECTED WORK" description="三组完整品牌概念：从识别系统、包装与空间应用，到可交互的数字页面。" number="03" action={{ label: '了解设计方向', href: '#capabilities' }} />
+        <SectionTitle eyebrow="SELECTED PROJECTS" title="SELECTED WORK" description="三个品牌系统，三组独立平面命题。从产品的识别，到文化、编辑与音乐的视觉表达。" number="03" action={{ label: '了解设计方向', href: '#capabilities' }} />
         <div className="project-index reveal" aria-label="精选作品概览">
           <span><b>{String(projectData.length).padStart(2, '0')}</b> 个精选案例</span>
           <span>品牌识别 / 艺术指导 / 产品视觉</span>
@@ -298,11 +300,12 @@ function Work({ projectData, email }) {
             <article className={`project project-${index + 1} reveal`} key={project.id}>
               <a className="project-entry" href={`/project/${project.id}`}>
                 <div className="project-image"><img loading="lazy" decoding="async" src={project.image} alt={`${project.title} 项目概念视觉`} /><span className="project-open" aria-hidden="true"><ImageSquare weight="bold" /></span><span className="project-id">{project.id}</span></div>
-                {project.preview && <div className="project-preview-strip" aria-hidden="true"><img loading="lazy" src={project.preview.print} alt="" /><span>FEATURED CASE<br /><b>从产品到完整品牌体验</b></span><img loading="lazy" src={project.preview.gallery} alt="" /></div>}<div className="project-copy"><div><span>{project.type}</span><h3>{project.title}</h3></div><div className="project-side"><p>{project.subtitle}</p><b>查看研究 <ArrowUpRight weight="bold" /></b></div></div>
+                {project.preview && <div className="project-preview-strip" aria-hidden="true"><img loading="lazy" src={project.preview.print} alt="" /><span>DESIGN PRINCIPLE<br /><b>{["圆弧 × 留白 × 材质","条带 × 间隔 × 节奏","叶形 × 自然 × 秩序"][index]}</b></span><img loading="lazy" src={project.preview.gallery} alt="" /></div>}<div className="project-copy"><div><span>{project.type}</span><h3>{project.title}</h3></div><div className="project-side"><p>{project.subtitle}</p><b>查看研究 <ArrowUpRight weight="bold" /></b></div></div>
               </a>
             </article>
           ))}
         </div>
+        <StudyArchive />
       </div>
     </section>
   )
@@ -595,9 +598,10 @@ function CapabilityPage({ content, slug }) {
     <main className="shell curated-main"><div className="curated-heading"><span>{capability.number} / {capability.en}</span><h1>{capability.title}</h1><h2>{capability.headline}</h2><p>{capability.text}</p></div>
       <nav className="discipline-nav" aria-label="切换设计分类">{content.capabilities.map(item => <a key={item.slug} aria-current={item.slug === slug ? 'page' : undefined} href={'/capability/' + item.slug}>{item.number} / {item.title}</a>)}</nav>
       <div className="discipline-scope">{capability.scope.map((item,index) => <div key={item}><span>0{index+1}</span><h3>{item}</h3></div>)}</div>
+      {slug === 'ai-creative' && <StudyArchive full />}
       <div className="curated-work-list">{capability.works.map((work,index) => <article className="curated-work" key={work.id}>
         <div className="curated-work-top"><span>0{index+1} / CONCEPT STUDY</span><h2>{work.title}</h2><p>{work.description}</p><a href={'/project/'+work.id}>完整品牌案例 ↗</a></div>
-        {slug === 'ecommerce' ? <DigitalPanel project={content.projects.find(item => item.id === work.id)} /> : <div className="curated-media"><a href={'/project/'+work.id} aria-label={'查看 '+work.title+' 完整案例'}><CapabilityMedia source={work.image} title={work.title + ' 应用展示'}/></a><figure><CapabilityMedia source={work.secondary} title={work.title + ' 设计细节'}/><figcaption>{slug === 'brand-systems' ? 'SYSTEM / 字体与色彩规则' : 'DETAIL / 细节与视觉研究'}</figcaption></figure></div>}
+        {slug === 'brand-systems' ? <IdentityStudy project={content.projects.find(item => item.id === work.id)} compact /> : slug === 'ecommerce' ? <DigitalPanel project={content.projects.find(item => item.id === work.id)} /> : <div className="curated-media"><a href={'/project/'+work.id} aria-label={'查看 '+work.title+' 完整案例'}><CapabilityMedia source={work.image} title={work.title + ' 应用展示'}/></a><figure><CapabilityMedia source={work.secondary} title={work.title + ' 设计细节'}/><figcaption>{slug === 'brand-systems' ? 'SYSTEM / 字体与色彩规则' : 'DETAIL / 细节与视觉研究'}</figcaption></figure></div>}
       </article>)}</div>
       <footer className="curated-footer"><span>自主概念研究 · AI 辅助应用视觉 · 非商业委托</span><a href="/#contact">整理合作需求 ↗</a></footer>
     </main>
@@ -647,10 +651,9 @@ function DailyStillCase({ project, next }) {
       <figure className="daily-full-image"><img src={project.image} fetchPriority="high" width="1536" height="1024" alt="Daily Still 品牌包装家族概念效果图" /><figcaption>BRAND FAMILY / 包装、产品与纸品的统一表达</figcaption></figure>
       <section className="daily-story shell" id="daily-idea"><span className="daily-label">01 / THE IDEA</span><div><h2>少一点噪声，<br /><em>多一点感受。</em></h2><p>从一枚蓝色球形瓶盖出发，把“安静”转化为可被看见的品牌语言。温暖的纸张、克制的字标与缓慢展开的圆弧，让产品、包装和纸品共享同一种节奏。</p></div><aside><span>三个设计支点</span><p>01　以钴蓝建立记忆</p><p>02　以圆弧连接触点</p><p>03　以材质传递温度</p></aside></section>
       <section className="daily-material" id="daily-material"><div className="daily-material-photo"><img src={study.print} loading="lazy" width="1536" height="1024" alt="品牌卡片与封套的纸张、凹印概念特写" /></div><div className="daily-material-copy"><span className="daily-label">02 / MATERIAL &amp; DETAIL</span><h2>看得见的留白。<br /><em>想触摸的细节。</em></h2><p>将同心圆从平面图案转化为压凹的工艺设想，以侧光表达浅浅的起伏。暖白纸面与蓝色封套形成对照，让识别不只依靠一个标志。</p><div className="daily-material-spec"><span>暖白棉纸质感</span><span>无色压凹概念</span><span>钴蓝单色印刷方向</span></div><small>AI 辅助材质效果研究，非实际印刷样品。</small></div></section>
-      <section className="daily-identity" id="brand-system"><div className="shell daily-identity-inner"><div><span className="daily-label">03 / A COHERENT LANGUAGE</span><h2>One circle.<br /><em>Many expressions.</em></h2><p>一组圆弧，从瓶盖轮廓延伸到包装、纸品和空间海报。衬线字标建立柔和的语气，清晰的信息网格保证每个应用都容易阅读。</p><div className="daily-colors"><span><i style={{background:'#263EA0'}} />COBALT / #263EA0</span><span><i style={{background:'#F0EDDF'}} />WARM WHITE / #F0EDDF</span><span><i style={{background:'#B3A68A'}} />STONE / #B3A68A</span></div></div><div className="daily-wordmark" aria-label="Daily Still 字标与圆弧图形"><span>Daily<br />Still.</span><div className="daily-orbits" aria-hidden="true"><i/><i/><i/><i/></div><small>QUIET BY NATURE.</small></div></div></section>
-      <section className="daily-gallery shell"><div className="daily-gallery-heading"><span className="daily-label">04 / IN CONTEXT</span><h2>把同一种气质，<br />带进不同的场景。</h2><p>海报以字标、产品、图形三种表达并置，建立主次与节奏。图像是品牌概念的空间预演。</p></div><figure><img src={study.gallery} loading="lazy" width="1536" height="1024" alt="Daily Still 三幅海报在画廊中的概念应用效果" /><figcaption>POSTER SERIES / 空间应用概念效果</figcaption></figure></section>
+      <IdentityStudy project={project} /><section className="daily-gallery shell"><div className="daily-gallery-heading"><span className="daily-label">04 / IN CONTEXT</span><h2>把同一种气质，<br />带进不同的场景。</h2><p>海报以字标、产品、图形三种表达并置，建立主次与节奏。图像是品牌概念的空间预演。</p></div><figure><img src={study.gallery} loading="lazy" width="1536" height="1024" alt="Daily Still 三幅海报在画廊中的概念应用效果" /><figcaption>POSTER SERIES / 空间应用概念效果</figcaption></figure></section>
       <section className="daily-detail-pair shell"><figure><img loading="lazy" src={study.original} alt="蓝色球形瓶盖与石材构图研究" /><figcaption>01 / 产品轮廓与材质研究</figcaption></figure><div><span className="daily-label">DESIGN RATIONALE</span><h2>从单一识别点，<br />到完整视觉秩序。</h2><p>球形瓶盖是最初的记忆点；圆弧与蓝色将这个记忆连接到更多触点。主视觉强调光与材质，应用稿强调信息与留白，让产品情绪与品牌识别彼此呼应。</p><p className="daily-disclosure">本项目为虚构品牌的自主概念研究。产品、包装、纸品与空间应用图为 AI 辅助效果图；字标与版式为视觉探索，不代表已生产、打样或投入商业使用。</p></div></section>
-      <section className="daily-digital shell" id="case-digital"><DigitalPanel project={project} /></section><section className="daily-support shell"><details><summary>查看基础规范与平面设计稿 <span>＋</span></summary><ArtworkViewer boards={project.system.boards} title={project.title} /></details></section>
+      <section className="daily-digital shell" id="case-digital"><DigitalPanel project={project} /></section>
       <nav className="shell case-next daily-next" aria-label="浏览其他案例"><a className="case-back" href="/#work">← 全部作品</a><a className="case-next-link" href={'/project/' + next.id}><img loading="lazy" src={next.image} alt="" /><span><small>NEXT PROJECT / 下一案例</small><b>{next.title}</b></span><ArrowUpRight /></a></nav>
     </main>
   </div>
@@ -684,6 +687,7 @@ function ProjectPage({ content, id }) {
 function App() {
   const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
   const isAdmin = pathname === '/admin'
+  const studyMatch = pathname.match(/^\/study\/([^/]+)$/)
   const digitalMatch = pathname.match(/^\/digital\/([^/]+)$/)
   const projectMatch = pathname.match(/^\/project\/([^/]+)$/)
   const capabilityMatch = pathname.match(/^\/capability\/([^/]+)$/)
@@ -693,11 +697,21 @@ function App() {
   useEffect(() => {
     const selectedProject = content.projects.find(item => pathname === '/project/' + item.id || pathname === '/digital/' + item.id)
     const selectedCapability = content.capabilities.find(item => pathname === '/capability/' + item.slug)
-    document.title = selectedProject ? selectedProject.title + ' — Brand Visual' : selectedCapability ? selectedCapability.title + ' — Brand Visual' : 'Brand Visual — 品牌视觉作品集'
+    const selectedStudy = studies.find(item => pathname === '/study/' + item.slug)
+    document.title = selectedStudy ? selectedStudy.name + ' — Visual Study' : selectedProject ? selectedProject.title + ' — Brand Visual' : selectedCapability ? selectedCapability.title + ' — Brand Visual' : 'Brand Visual — 品牌视觉作品集'
     if (isAdmin) return
     setContent(defaultContent)
   }, [isAdmin])
 
+  useEffect(() => {
+    if (pathname === '/' || !window.location.hash) return
+    const revealSection = () => document.getElementById(window.location.hash.slice(1))?.scrollIntoView({block: 'start'})
+    const frame = requestAnimationFrame(revealSection)
+    window.addEventListener('load', revealSection, {once: true})
+    return () => { cancelAnimationFrame(frame); window.removeEventListener('load', revealSection) }
+  }, [pathname])
+
+  if (studyMatch) return studies.some(item => item.slug === studyMatch[1]) ? <StudyPage slug={studyMatch[1]} /> : <SiteNotFound />
   if (isAdmin) return <SiteNotFound />
   if (digitalMatch) return <DigitalPage project={content.projects.find(item => item.id === decodeURIComponent(digitalMatch[1]))} />
   if (!ready) return <div className="portfolio-loading"><span>PORTFOLIO</span><i /></div>

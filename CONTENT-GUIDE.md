@@ -21,3 +21,10 @@
 ## 本地预览和发布
 运行 `npm run dev` 预览；`npm run build` 构建。
 发布沿用 `.openai/hosting.json` 中的项目，通过 Sites source helper 提交源代码、保存版本并部署。不要把任何访问凭证写入项目。
+
+
+## 独立平面研究与品牌识别展开（第九版）
+
+新增 `/study/tidal`、`/study/field`、`/study/afterhours`。九张原创矢量海报保存在 `public/practice/`，可从案例页下载 SVG。它们分别为虚构文化计划、植物观察刊物、独立音乐主题，不是真实活动、出版或发行项目。
+
+`src/components/BrandPractice.jsx` 中的 `studies` 维护各独立研究文案，`definitions` 维护三个品牌的字标、图形、配色比例和应用规则。识别板支持网格切换以及包装、卡片、海报三种平面应用。原有三个品牌的重复基础规范段落已移除。新应用展示为网页中的平面设计编排，不是实际生产打样。

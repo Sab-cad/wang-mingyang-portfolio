@@ -1,3 +1,4 @@
+import { IdentityStudy } from './BrandPractice.jsx'
 import { useState } from 'react'
 
 export function BriefForm({ email = '' }) {
@@ -50,10 +51,9 @@ export function CompleteCase({ project, next, Viewer }) {
       <figure className="complete-hero"><img src={project.image} fetchPriority="high" width="1536" height="1024" alt={project.title + '品牌包装家族概念效果'} /><figcaption>BRAND FAMILY / AI 辅助概念效果 · 未实物打样</figcaption></figure>
       <section className="complete-story shell" id="case-strategy"><span>01 / DESIGN INTENT</span><h2>{c.idea}</h2><div><p>{c.body}</p><small>{c.keywords}</small></div></section>
       <section className="complete-material shell" id="case-material"><div className="complete-material-heading"><span>02 / MATERIAL &amp; DETAIL</span><h2>{c.detailTitle}</h2><p>{c.detailBody}</p></div><div className="complete-pair"><figure><img loading="lazy" src={c.detail} alt={project.title + '包装印刷与材质概念特写'} /><figcaption>01 / 纸品与材质关系</figcaption></figure><figure><img loading="lazy" src={c.original} alt={project.title + '原始产品造型视觉研究'} /><figcaption>02 / 产品形态与光线研究</figcaption></figure></div></section>
-      <section className="complete-identity" id="brand-system"><div className="shell"><span>03 / VISUAL LANGUAGE</span><div className="complete-identity-grid"><h2>{c.english}</h2><div><h3>{c.systemTitle}</h3><p>{project.system.idea}</p><div className="complete-swatches">{project.system.palette.map(color => <div key={color.hex}><i style={{background:color.hex}} /><span>{color.name}<br />{color.hex}</span></div>)}</div></div></div><div className={'signature-graphic graphic-' + c.theme} aria-hidden="true">{Array.from({length:c.theme === 'sound' ? 18 : 6},(_,i) => <i key={i}/>)}</div></div></section>
-      <section className="complete-space shell"><div><span>04 / IN CONTEXT</span><h2>{c.spaceTitle}</h2><p>{c.spaceBody}</p></div><figure><img loading="lazy" width="1536" height="1024" src={c.space} alt={project.title + '品牌海报空间应用概念'} /><figcaption>POSTER SERIES / 空间应用概念效果</figcaption></figure></section>
+      <IdentityStudy project={project} /><section className="complete-space shell"><div><span>04 / IN CONTEXT</span><h2>{c.spaceTitle}</h2><p>{c.spaceBody}</p></div><figure><img loading="lazy" width="1536" height="1024" src={c.space} alt={project.title + '品牌海报空间应用概念'} /><figcaption>POSTER SERIES / 空间应用概念效果</figcaption></figure></section>
       <section className="complete-digital shell" id="case-digital"><DigitalPanel project={project} /></section>
-      <section className="complete-support shell"><details><summary>查看字体规范、图形与平面设计稿 <span>＋</span></summary><Viewer boards={project.system.boards} title={project.title} /></details><p>本项目为虚构品牌的自主概念研究。包装、产品、纸品与空间图为 AI 辅助效果图；设计规范与页面为视觉探索，不代表实际生产、客户委托或商业投放。</p></section>
+      <section className="complete-support shell"><p>本项目为虚构品牌的自主概念研究。包装、产品、纸品与空间图为 AI 辅助效果图；设计规范与页面为视觉探索，不代表实际生产、客户委托或商业投放。</p></section>
       <nav className="case-next shell complete-next" aria-label="浏览其他案例"><a className="case-back" href="/#work">← 全部作品</a><a className="case-next-link" href={'/project/' + next.id}><img loading="lazy" src={next.image} alt=""/><span><small>NEXT PROJECT</small><b>{next.title}</b></span><span>↗</span></a></nav>
     </main>
   </div>

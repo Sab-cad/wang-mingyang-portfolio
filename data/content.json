@@ -8,7 +8,7 @@
     "address": "独立视觉创作",
     "email": "",
     "phone": "",
-    "intro": "以品牌识别为起点，把字体、色彩、图像与应用组织成统一的视觉语言。关注产品本身的特征，也关心它出现在包装、海报与屏幕上的样子。这里用三组独立概念项目，呈现从方向探索、视觉系统到应用落地的完整思考。",
+    "intro": "关注品牌如何被看见，也关注它为什么这样呈现。从字标、图形到包装与屏幕，以清晰的规则连接不同触点。作品集收录三个品牌系统与三组文化、编辑、音乐方向的独立设计研究。",
     "stats": {
       "experience": "识别",
       "projects": "秩序",
@@ -28,9 +28,19 @@
       "alt": "DAILY STILL · 品牌包装家族"
     },
     {
+      "id": "tidal",
+      "image": "/practice/tidal-0.svg",
+      "alt": "TIDAL 文化视觉海报"
+    },
+    {
       "id": "02-family",
       "image": "/original/sound-family.webp",
       "alt": "BETWEEN SOUND · 品牌包装家族"
+    },
+    {
+      "id": "field",
+      "image": "/practice/field-0.svg",
+      "alt": "FIELD NOTES 编辑设计"
     },
     {
       "id": "03-family",
@@ -38,19 +48,9 @@
       "alt": "A SIP OF GREEN · 品牌包装家族"
     },
     {
-      "id": "01-detail",
-      "image": "/original/daily-print-v2.webp",
-      "alt": "DAILY STILL · 材质与纸品研究"
-    },
-    {
-      "id": "02-detail",
-      "image": "/original/sound-detail.webp",
-      "alt": "BETWEEN SOUND · 材质与纸品研究"
-    },
-    {
-      "id": "03-detail",
-      "image": "/original/green-detail.webp",
-      "alt": "A SIP OF GREEN · 材质与纸品研究"
+      "id": "afterhours",
+      "image": "/practice/afterhours-0.svg",
+      "alt": "AFTER HOURS 音乐视觉"
     }
   ],
   "social": {
@@ -320,7 +320,7 @@
       "title": "品牌识别研究",
       "en": "Brand Identity",
       "layout": "ai-large",
-      "text": "识别系统负责让品牌在不同尺寸与媒介中仍然被认出来。这里展示三组概念如何从产品特征中提炼图形、色彩和字体规则。",
+      "text": "从形态来源、图形提炼到版面应用，直接展开三个品牌的识别规则。可切换构图网格与包装、卡片、海报，观察同一系统如何适应不同尺寸。",
       "cover": "/original/daily-print-v2.webp",
       "works": [
         {
@@ -359,8 +359,8 @@
       "title": "艺术指导",
       "en": "Art Direction",
       "layout": "ai-large",
-      "text": "艺术指导把品牌气质转化为可以看见的场景：日常留白的温度、声场之间的力度、一口青意的轻盈，各自拥有明确的图像逻辑。",
-      "cover": "/original/daily-gallery-v2.webp",
+      "text": "从文化计划、植物观察刊物到独立音乐系列，三个不同命题分别探索曲线、图鉴与节拍。九张原创矢量海报展示各自的字体、图形和编排逻辑；品牌空间图则展示视觉如何进入场景。",
+      "cover": "/practice/tidal-0.svg",
       "works": [
         {
           "id": "01",
