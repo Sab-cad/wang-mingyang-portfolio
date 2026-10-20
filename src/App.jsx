@@ -297,7 +297,7 @@ function Work({ projectData, email }) {
             <article className={`project project-${index + 1} reveal`} key={project.id}>
               <a className="project-entry" href={`/project/${project.id}`}>
                 <div className="project-image"><img loading="lazy" decoding="async" src={project.image} alt={`${project.title} 项目概念视觉`} /><span className="project-open" aria-hidden="true"><ImageSquare weight="bold" /></span><span className="project-id">{project.id}</span></div>
-                <div className="project-copy"><div><span>{project.type}</span><h3>{project.title}</h3></div><div className="project-side"><p>{project.subtitle}</p><b>查看研究 <ArrowUpRight weight="bold" /></b></div></div>
+                {project.premium && <div className="project-preview-strip" aria-hidden="true"><img loading="lazy" src={project.premium.print} alt="" /><span>FEATURED CASE<br /><b>从产品到完整品牌体验</b></span><img loading="lazy" src={project.premium.gallery} alt="" /></div>}<div className="project-copy"><div><span>{project.type}</span><h3>{project.title}</h3></div><div className="project-side"><p>{project.subtitle}</p><b>查看研究 <ArrowUpRight weight="bold" /></b></div></div>
               </a>
             </article>
           ))}
@@ -672,11 +672,35 @@ function ArtworkViewer({ boards, title }) {
   </>
 }
 
+function DailyStillCase({ project, next }) {
+  const study = project.premium
+  return <div className="daily-case">
+    <header className="capability-detail-nav"><a href="/#work"><ArrowLeft /> 返回作品集</a><span>DAILY STILL / BRAND STUDY</span><a href="/#contact">联系我 <ArrowUpRight /></a></header>
+    <main>
+      <section className="daily-opening shell">
+        <div className="daily-eyebrow"><span>SELECTED CASE / 01</span><span>SELF-INITIATED · 2026</span></div>
+        <div className="daily-title-row"><h1>Daily <em>Still.</em></h1><p>让日常，<br />慢下来。</p></div>
+        <div className="daily-meta"><span>品牌识别 / 包装概念 / 艺术指导</span><span>自主概念研究 · AI 辅助效果图 · 未实物打样</span></div>
+        <nav className="case-sections" aria-label="案例目录"><a href="#daily-idea">01 品牌主张</a><a href="#daily-material">02 材质与细节</a><a href="#brand-system">03 识别与应用</a></nav>
+      </section>
+      <figure className="daily-full-image"><img src={project.image} fetchPriority="high" width="1536" height="1024" alt="Daily Still 品牌包装家族概念效果图" /><figcaption>BRAND FAMILY / 包装、产品与纸品的统一表达</figcaption></figure>
+      <section className="daily-story shell" id="daily-idea"><span className="daily-label">01 / THE IDEA</span><div><h2>少一点噪声，<br /><em>多一点感受。</em></h2><p>从一枚蓝色球形瓶盖出发，把“安静”转化为可被看见的品牌语言。温暖的纸张、克制的字标与缓慢展开的圆弧，让产品、包装和纸品共享同一种节奏。</p></div><aside><span>三个设计支点</span><p>01　以钴蓝建立记忆</p><p>02　以圆弧连接触点</p><p>03　以材质传递温度</p></aside></section>
+      <section className="daily-material" id="daily-material"><div className="daily-material-photo"><img src={study.print} loading="lazy" width="1536" height="1024" alt="品牌卡片与封套的纸张、凹印概念特写" /></div><div className="daily-material-copy"><span className="daily-label">02 / MATERIAL &amp; DETAIL</span><h2>看得见的留白。<br /><em>想触摸的细节。</em></h2><p>将同心圆从平面图案转化为压凹的工艺设想，以侧光表达浅浅的起伏。暖白纸面与蓝色封套形成对照，让识别不只依靠一个标志。</p><div className="daily-material-spec"><span>暖白棉纸质感</span><span>无色压凹概念</span><span>钴蓝单色印刷方向</span></div><small>AI 辅助材质效果研究，非实际印刷样品。</small></div></section>
+      <section className="daily-identity" id="brand-system"><div className="shell daily-identity-inner"><div><span className="daily-label">03 / A COHERENT LANGUAGE</span><h2>One circle.<br /><em>Many expressions.</em></h2><p>一组圆弧，从瓶盖轮廓延伸到包装、纸品和空间海报。衬线字标建立柔和的语气，清晰的信息网格保证每个应用都容易阅读。</p><div className="daily-colors"><span><i style={{background:'#263EA0'}} />COBALT / #263EA0</span><span><i style={{background:'#F0EDDF'}} />WARM WHITE / #F0EDDF</span><span><i style={{background:'#B3A68A'}} />STONE / #B3A68A</span></div></div><div className="daily-wordmark" aria-label="Daily Still 字标与圆弧图形"><span>Daily<br />Still.</span><div className="daily-orbits" aria-hidden="true"><i/><i/><i/><i/></div><small>QUIET BY NATURE.</small></div></div></section>
+      <section className="daily-gallery shell"><div className="daily-gallery-heading"><span className="daily-label">04 / IN CONTEXT</span><h2>把同一种气质，<br />带进不同的场景。</h2><p>海报以字标、产品、图形三种表达并置，建立主次与节奏。图像是品牌概念的空间预演。</p></div><figure><img src={study.gallery} loading="lazy" width="1536" height="1024" alt="Daily Still 三幅海报在画廊中的概念应用效果" /><figcaption>POSTER SERIES / 空间应用概念效果</figcaption></figure></section>
+      <section className="daily-detail-pair shell"><figure><img loading="lazy" src={study.original} alt="蓝色球形瓶盖与石材构图研究" /><figcaption>01 / 产品轮廓与材质研究</figcaption></figure><div><span className="daily-label">DESIGN RATIONALE</span><h2>从单一识别点，<br />到完整视觉秩序。</h2><p>球形瓶盖是最初的记忆点；圆弧与蓝色将这个记忆连接到更多触点。主视觉强调光与材质，应用稿强调信息与留白，让产品情绪与品牌识别彼此呼应。</p><p className="daily-disclosure">本项目为虚构品牌的自主概念研究。产品、包装、纸品与空间应用图为 AI 辅助效果图；字标与版式为视觉探索，不代表已生产、打样或投入商业使用。</p></div></section>
+      <section className="daily-support shell"><details><summary>查看基础规范与平面设计稿 <span>＋</span></summary><ArtworkViewer boards={project.system.boards} title={project.title} /></details></section>
+      <nav className="shell case-next daily-next" aria-label="浏览其他案例"><a className="case-back" href="/#work">← 全部作品</a><a className="case-next-link" href={'/project/' + next.id}><img loading="lazy" src={next.image} alt="" /><span><small>NEXT PROJECT / 下一案例</small><b>{next.title}</b></span><ArrowUpRight /></a></nav>
+    </main>
+  </div>
+}
+
 function ProjectPage({ content, id }) {
   const index = content.projects.findIndex(item => item.id === id)
   const project = content.projects[index]
   if (!project) return <main className="capability-not-found"><h1>作品不存在</h1><a href="/#work">返回作品集</a></main>
   const next = content.projects[(index + 1) % content.projects.length]
+  if (project.premium) return <DailyStillCase project={project} next={next} />
   const notes = [ ['01', '项目背景', project.background], ['02', '视觉策略', project.process], ['03', '概念延展', project.outcome] ]
   return <div className="project-detail-page">
     <header className="capability-detail-nav"><a href="/#work"><ArrowLeft /> 返回作品集</a><span>BRAND / VISUAL</span><a href="/#contact">联系我 <ArrowUpRight /></a></header>

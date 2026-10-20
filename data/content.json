@@ -16,21 +16,21 @@
     }
   },
   "media": {
-    "hero": "/assets/hero-cloud-studio.png",
+    "hero": "/original/cloud-studio-v2.png",
     "portrait": "/original/identity-01.svg",
-    "contact": "/assets/hero-cloud-studio.png",
+    "contact": "/original/cloud-studio-v2.png",
     "wechatQr": ""
   },
   "heroGallery": [
     {
       "id": "01-photo",
-      "image": "/original/daily-still.png",
+      "image": "/original/daily-campaign-v2.png",
       "alt": "DAILY STILL · 产品主视觉"
     },
     {
-      "id": "01-identity",
-      "image": "/original/identity-01.svg",
-      "alt": "DAILY STILL · 字标与色彩研究"
+      "id": "daily-print",
+      "image": "/original/daily-print-v2.png",
+      "alt": "DAILY STILL · 纸品与印刷工艺概念"
     },
     {
       "id": "02-photo",
@@ -61,9 +61,9 @@
     {
       "id": "01",
       "title": "DAILY STILL",
-      "subtitle": "日常留白 / 自主概念研究",
+      "subtitle": "日常留白 / 品牌识别与包装概念",
       "type": "BRAND CONCEPT / 2026",
-      "image": "/original/daily-still.png",
+      "image": "/original/daily-campaign-v2.png",
       "url": "/project/01",
       "background": "如何让一件没有复杂装饰的日常用品被记住？这次研究选择以球形瓶盖作为单一识别点，用温暖石材和冷调蓝色形成对照，探索安静但不平淡的产品视觉。",
       "process": "只留一个记忆点：把色彩集中在球形瓶盖，瓶身维持低饱和。视线先识别蓝色，再回到产品轮廓。 用光线组织空间：以侧向光和玻璃折射建立画面方向，留白提供呼吸感，不堆叠与产品无关的道具。 延展为展示语言：字标与色板沿用暖白和钴蓝，以圆形符号连接包装轮廓和身份探索，形成统一的品牌方向。",
@@ -113,6 +113,11 @@
             "note": "将同一套字体、色彩与图形延展到网页首屏；展示为静态视觉提案。"
           }
         ]
+      },
+      "premium": {
+        "print": "/original/daily-print-v2.png",
+        "gallery": "/original/daily-gallery-v2.png",
+        "original": "/original/daily-still.png"
       }
     },
     {
@@ -289,13 +294,13 @@
       "en": "Art Direction",
       "layout": "ai-large",
       "text": "以海报构图、图形节奏与配色，建立各自鲜明的品牌情绪。",
-      "cover": "/original/poster-01.svg",
+      "cover": "/original/daily-gallery-v2.png",
       "works": [
         {
           "id": "01",
           "title": "DAILY STILL",
-          "description": "品牌海报与构图节奏研究",
-          "image": "/original/poster-01.svg"
+          "description": "品牌海报空间应用 / AI 辅助概念效果",
+          "image": "/original/daily-gallery-v2.png"
         },
         {
           "id": "02",
@@ -319,13 +324,13 @@
       "en": "Product & Packaging",
       "layout": "ai-large",
       "text": "从产品主视觉到包装平面概念，让材质、信息与品牌识别形成一致表达。",
-      "cover": "/original/packaging-01.svg",
+      "cover": "/original/daily-campaign-v2.png",
       "works": [
         {
           "id": "01",
           "title": "DAILY STILL",
-          "description": "包装平面概念 / 非实物样品",
-          "image": "/original/packaging-01.svg"
+          "description": "包装家族概念效果 / AI 辅助视觉",
+          "image": "/original/daily-campaign-v2.png"
         },
         {
           "id": "02",
