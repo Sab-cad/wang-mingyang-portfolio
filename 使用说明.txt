@@ -1,0 +1,19 @@
+造物练习 · 原创概念作品集
+
+本版本完全重写首页与案例页，三张产品图由本次内置 ImageGen 全新生成。
+日常留白、声场之间、一口青意均为虚构概念项目，不代表真实商业委托。
+未使用旧作品集图片、人物、视频、经历或客户数据。
+
+后续内容维护：
+- data/content.json：三个案例的标题、文案、颜色与图片路径。
+- public/original：这次新生成的视觉素材。
+- src/App.jsx：首页文字与页面结构。
+- src/styles.css：视觉样式与手机适配。
+
+本地运行：npm install，然后 npm run dev。
+构建：npm run build。
+线上更新：沿用 .openai/hosting.json 的项目 ID，通过 Sites 发布。
+线上地址保持不变，不需要重新创建网站。
+
+这一版的内容结构已重写，不能直接用旧 my-portfolio 后台的数据覆盖。
+以前的压缩包为旧版留档；以后继续修改请以 portfolio-online 为准。

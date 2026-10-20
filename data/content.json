@@ -1,301 +1,63 @@
 {
-  "profile": {
-    "nameEn": "你的名字",
-    "role": "视觉设计师 / AI 创意设计师",
-    "heroRole": "VISUAL / AI DESIGNER",
-    "services": "产品视觉 / 电商设计 / AI 创意",
-    "location": "你的城市（示意）",
-    "address": "你的城市（示意）",
-    "email": "hello@example.com",
-    "phone": "暂未公开",
-    "intro": "这里是我的视觉作品集，记录产品视觉、电商内容与 AI 创意探索。本版本使用示意资料与原包素材；正式使用前，请替换为自己的项目、职责与真实经历。",
-    "stats": {
-      "experience": "—",
-      "projects": "—",
-      "brands": "—"
-    }
-  },
-  "media": {
-    "hero": "/assets/hero-cloud-ip05-v1.png",
-    "portrait": "/assets/snake-boy-05-art-toy.png",
-    "contact": "/assets/hero-cloud-ip05-v1.png",
-    "wechatQr": "/assets/wechat-qr-placeholder.svg"
-  },
-  "heroGallery": [
-    {
-      "id": "gallery-01",
-      "image": "/uploads/1792389003332-fb344cd2-1.webp",
-      "alt": "电动自行车场景视觉 1"
-    },
-    {
-      "id": "gallery-02",
-      "image": "/uploads/1792390330962-520babd5-2.webp",
-      "alt": "电动自行车场景视觉 2"
-    },
-    {
-      "id": "gallery-03",
-      "image": "/uploads/1792390335148-39ed7bcb-3.webp",
-      "alt": "电动自行车场景视觉 3"
-    },
-    {
-      "id": "gallery-04",
-      "image": "/uploads/1792390339085-858a82d0-4.webp",
-      "alt": "电动自行车场景视觉 4"
-    },
-    {
-      "id": "gallery-05",
-      "image": "/uploads/1792390343058-5244743d-5.webp",
-      "alt": "电动自行车场景视觉 5"
-    },
-    {
-      "id": "gallery-1792390345615",
-      "image": "/uploads/1792390351476-7d6728a8-6.webp",
-      "alt": "电动自行车场景视觉 6"
-    },
-    {
-      "id": "gallery-1792390353407",
-      "image": "/uploads/1792390359058-e912ef98-7.webp",
-      "alt": "电动自行车场景视觉 7"
-    },
-    {
-      "id": "gallery-1792390353855",
-      "image": "/uploads/1792390362520-58165b8b-8.webp",
-      "alt": "电动自行车场景视觉 8"
-    },
-    {
-      "id": "gallery-1792390354199",
-      "image": "/uploads/1792390365762-b2dea4da-9.webp",
-      "alt": "电动自行车场景视觉 9"
-    },
-    {
-      "id": "gallery-1792390354486",
-      "image": "/uploads/1792390369097-4d5c8f12-10.webp",
-      "alt": "电动自行车场景视觉 10"
-    }
-  ],
-  "social": {
-    "behance": "",
-    "instagram": ""
-  },
   "projects": [
     {
       "id": "01",
-      "title": "电机动力 · 产品卖点视觉",
-      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
-      "type": "PRODUCT / E-COMMERCE",
-      "image": "/uploads/1792404722360-de353d8a-media.webp",
-      "url": "/project/01",
-      "background": "",
-      "process": "",
-      "outcome": ""
+      "slug": "still",
+      "title": "日常留白",
+      "en": "DAILY STILL",
+      "subtitle": "用一个蓝色圆点，为日常护肤建立视觉记忆。",
+      "short": "温润材质与冷色焦点的对话",
+      "category": "产品视觉",
+      "type": "护肤产品 / 材质与光线",
+      "image": "/original/daily-still.png",
+      "alt": "蓝色球形瓶盖与乳白护肤瓶，置于暖色石材和玻璃环前",
+      "background": "如何让一件没有复杂装饰的日常用品被记住？这次研究选择以球形瓶盖作为单一识别点，用温暖石材和冷调蓝色形成对照，探索安静但不平淡的产品视觉。",
+      "material": "暖白、石灰岩与钴蓝。磨砂瓶身降低反光，玻璃的通透感与粗粝石材形成材质层次。",
+      "colors": ["#F1E8D6", "#C7AA82", "#163DA6"],
+      "decisions": [
+        {"title": "只留一个记忆点", "text": "把色彩集中在球形瓶盖，瓶身维持低饱和。视线先识别蓝色，再回到产品轮廓。"},
+        {"title": "用光线组织空间", "text": "以侧向光和玻璃折射建立画面方向，留白提供呼吸感，不堆叠与产品无关的道具。"},
+        {"title": "延展为展示语言", "text": "网站沿用暖白和钴蓝，并提取圆形作为入口符号，让产品图与页面形成呼应。"}
+      ]
     },
     {
       "id": "02",
-      "title": "户外骑行 · 功能信息设计",
-      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
-      "type": "PRODUCT / E-COMMERCE",
-      "image": "/uploads/1792404823975-04186c66-media.webp",
-      "url": "/project/02",
-      "background": "",
-      "process": "",
-      "outcome": ""
+      "slug": "pulse",
+      "title": "声场之间",
+      "en": "BETWEEN SOUND",
+      "subtitle": "把不可见的声音，转化为有张力的物体关系。",
+      "short": "金属、悬浮与暖橙色的节奏",
+      "category": "产品视觉",
+      "type": "便携音频 / 工业质感",
+      "image": "/original/between-sound.png",
+      "alt": "橙色金属便携音箱悬于赤陶台面上方，黑色线缆形成弧线",
+      "background": "音频产品不必总用黑色背景和声波图案表达科技感。这次从金属表面、重复孔阵和一条线缆出发，用温暖单色与轻微悬浮感探索另一种声音想象。",
+      "material": "陶土橙、赤铜与炭黑。同色系强调外壳的细微光泽差异，黑色弧线为画面提供节奏。",
+      "colors": ["#C45E2C", "#7E381C", "#272620"],
+      "decisions": [
+        {"title": "从结构中找节奏", "text": "让网孔阵列和圆形旋钮成为画面细节，用秩序和疏密传达精密感。"},
+        {"title": "以静态暗示运动", "text": "产品斜置，线缆形成弧线，台面阴影承接主体。悬浮是概念视觉表达，不是产品功能。"},
+        {"title": "控制视觉噪声", "text": "不加入性能数字、虚构卖点或多余标签，集中研究产品姿态与材质表现。"}
+      ]
     },
     {
       "id": "03",
-      "title": "山路骑行 · 场景主视觉",
-      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
-      "type": "PRODUCT / E-COMMERCE",
-      "image": "/uploads/1792404832480-0508733e-media.webp",
-      "url": "/project/03",
-      "background": "",
-      "process": "",
-      "outcome": ""
-    },
-    {
-      "id": "04",
-      "title": "智能骑行 · 功能展示",
-      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
-      "type": "PRODUCT / E-COMMERCE",
-      "image": "/uploads/1792404844917-5b5ea729-media.webp",
-      "url": "/project/04",
-      "background": "",
-      "process": "",
-      "outcome": ""
-    },
-    {
-      "id": "05",
-      "title": "多场景骑行 · 内容系列",
-      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
-      "type": "PRODUCT / E-COMMERCE",
-      "image": "/uploads/1792404859783-85b66dd8-media.webp",
-      "url": "/project/05",
-      "background": "",
-      "process": "",
-      "outcome": ""
-    },
-    {
-      "id": "06",
-      "title": "车身尺寸 · 购买信息设计",
-      "subtitle": "原包素材展示 · 项目背景与个人职责待补充",
-      "type": "PRODUCT / E-COMMERCE",
-      "image": "/uploads/1792404875926-29c06c0b-media.webp",
-      "url": "/project/06",
-      "background": "",
-      "process": "",
-      "outcome": ""
-    }
-  ],
-  "experience": [
-    {
-      "date": "时间待补充",
-      "company": "你的公司 / 工作室（示意）",
-      "role": "视觉设计师（示意）",
-      "note": "请填写真实任职时间、个人职责与代表成果；本条仅作排版示意。"
-    }
-  ],
-  "capabilities": [
-    {
-      "slug": "brand-systems",
-      "number": "01",
-      "icon": "strategy",
-      "title": "视觉概念与风格",
-      "en": "Brand Systems",
-      "layout": "brand-long",
-      "text": "产品、角色与人物视觉的风格探索。原包素材示意，不作为完整品牌系统案例。",
-      "cover": "/assets/project-aether.png",
-      "works": [
-        {
-          "id": "brand-01",
-          "title": "AETHER LAB",
-          "description": "未来护肤品牌视觉系统",
-          "image": "/assets/project-aether.png"
-        },
-        {
-          "id": "brand-02",
-          "title": "PERSONA / 26",
-          "description": "数字角色与品牌身份实验",
-          "image": "/assets/mascot-portrait.png"
-        },
-        {
-          "id": "brand-03",
-          "title": "人物视觉参考",
-          "description": "原包人物素材 · 待替换为你的作品",
-          "image": "/assets/portrait-lin.png"
-        }
-      ]
-    },
-    {
-      "slug": "ai-creative",
-      "number": "02",
-      "icon": "brain",
-      "title": "AI 创意工作流",
-      "en": "AI Creative",
-      "layout": "ai-large",
-      "text": "把生成式 AI 融入探索、提案与制作，让速度服务于更好的创意判断。 当前为示意素材，项目背景与制作职责待补充。",
-      "cover": "/assets/project-synthetic.png",
-      "works": [
-        {
-          "id": "ai-01",
-          "title": "SYNTHETIC TIDE",
-          "description": "生成式视觉实验计划",
-          "image": "/assets/project-synthetic.png"
-        },
-        {
-          "id": "ai-02",
-          "title": "CLOUD STUDIO",
-          "description": "AI 场景概念与角色叙事",
-          "image": "/assets/hero-cloud-ip05-v1.png"
-        },
-        {
-          "id": "ai-03",
-          "title": "DREAMSCAPE WORKFLOW",
-          "description": "从概念生成到场景精修的完整 AI 创意流程",
-          "image": "/assets/hero-cloud-studio.png"
-        }
-      ]
-    },
-    {
-      "slug": "3d-motion",
-      "number": "03",
-      "icon": "cube",
-      "title": "3D 视觉与动效",
-      "en": "3D & Motion",
-      "layout": "motion-grid",
-      "text": "用空间、材质和运动丰富品牌表达，构建更有沉浸感的数字视觉体验。 当前为示意素材，项目背景与制作职责待补充。",
-      "cover": "/assets/project-sonic.png",
-      "works": [
-        {
-          "id": "3d-01",
-          "title": "动态影像展示 01",
-          "description": "原包视频素材 · 项目名称、制作方式与个人职责待补充",
-          "image": "/uploads/1792475887962-c282217d-H9-1.webm"
-        },
-        {
-          "id": "3d-02",
-          "title": "动态影像展示 02",
-          "description": "原包视频素材 · 项目名称、制作方式与个人职责待补充",
-          "image": "/uploads/1792475913398-141e3d5a-H9.mp4"
-        },
-        {
-          "id": "3d-03",
-          "title": "动态影像展示 03",
-          "description": "原包视频素材 · 项目名称、制作方式与个人职责待补充",
-          "image": "/uploads/1792475928481-1b939861-media.mp4"
-        },
-        {
-          "id": "3d-04",
-          "title": "动态影像展示 04",
-          "description": "原包视频素材 · 项目名称、制作方式与个人职责待补充",
-          "image": "/uploads/1792475954218-96584433-media.mp4"
-        }
-      ]
-    },
-    {
-      "slug": "ecommerce",
-      "number": "04",
-      "icon": "image",
-      "title": "电商建模渲染",
-      "en": "E-commerce Rendering",
-      "layout": "commerce-render",
-      "text": "围绕产品建模、材质、灯光与场景渲染，建立兼顾品牌质感与转化目标的电商视觉。 当前为示意素材，项目背景与制作职责待补充。",
-      "cover": "/uploads/1792404722360-de353d8a-media.webp",
-      "works": [
-        {
-          "id": "01",
-          "title": "电机动力 · 产品卖点视觉",
-          "description": "原包素材展示 · 项目背景与个人职责待补充",
-          "image": "/uploads/1792404722360-de353d8a-media.webp"
-        },
-        {
-          "id": "02",
-          "title": "户外骑行 · 功能信息设计",
-          "description": "原包素材展示 · 项目背景与个人职责待补充",
-          "image": "/uploads/1792404823975-04186c66-media.webp"
-        },
-        {
-          "id": "03",
-          "title": "山路骑行 · 场景主视觉",
-          "description": "原包素材展示 · 项目背景与个人职责待补充",
-          "image": "/uploads/1792404832480-0508733e-media.webp"
-        },
-        {
-          "id": "04",
-          "title": "智能骑行 · 功能展示",
-          "description": "原包素材展示 · 项目背景与个人职责待补充",
-          "image": "/uploads/1792404844917-5b5ea729-media.webp"
-        },
-        {
-          "id": "05",
-          "title": "多场景骑行 · 内容系列",
-          "description": "原包素材展示 · 项目背景与个人职责待补充",
-          "image": "/uploads/1792404859783-85b66dd8-media.webp"
-        },
-        {
-          "id": "06",
-          "title": "车身尺寸 · 购买信息设计",
-          "description": "原包素材展示 · 项目背景与个人职责待补充",
-          "image": "/uploads/1792404875926-29c06c0b-media.webp"
-        }
+      "slug": "green",
+      "title": "一口青意",
+      "en": "A SIP OF GREEN",
+      "subtitle": "用色彩、果实与水珠，建立清新的第一印象。",
+      "short": "植物色谱与饮品包装概念",
+      "category": "品牌概念",
+      "type": "植物饮品 / 场景与色彩",
+      "image": "/original/sip-of-green.png",
+      "alt": "浅绿色饮品罐与梨片、绿色玻璃圆盘组成的植物饮品静物",
+      "background": "如果不依赖大段广告文案，一张画面如何传达口味联想？这次以梨的颜色和形态为线索，用深浅绿色、金属冷凝水珠和透光玻璃建立植物饮品的视觉概念。",
+      "material": "梨皮浅绿、森林深绿与银灰。背景压暗后，包装与果肉形成明度层次，让清新感落在具体材质上。",
+      "colors": ["#D6DDA6", "#243C26", "#BFC5BB"],
+      "decisions": [
+        {"title": "以实物暗示风味", "text": "用梨片作为口味线索，避免用抽象光效替代产品情境。这不是成分或营养承诺。"},
+        {"title": "建立层次而非堆色", "text": "背景、玻璃与罐体均在绿色谱系内，通过明度和透明度变化区分前后关系。"},
+        {"title": "保留身份设计空间", "text": "包装暂不添加真实品牌标识，作为概念主视觉研究，为后续命名与包装系统设计留出空间。"}
       ]
     }
   ]
