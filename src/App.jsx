@@ -428,7 +428,7 @@ function Portfolio({ content }) {
         .from('.hero-link', { y: 48, autoAlpha: 0, scaleX: 0.82, transformOrigin: '0% 50%', duration: 1.05 }, 2.62)
         .from('.hero-rail-shell', { y: 105, autoAlpha: 0, scale: 0.94, duration: 1.25 }, 2.58)
 
-      if (isMobile) opening.timeScale(1.35)
+      opening.timeScale(isMobile ? 1.85 : 1.6)
 
       gsap.to('.hero-background', {
         yPercent: 8,
@@ -451,7 +451,7 @@ function Portfolio({ content }) {
           scrollTrigger: { trigger: heading, start: 'top 82%', once: true },
         })
         timeline
-          .from(title, { yPercent: 135, scaleY: 0.58, skewY: 3, transformOrigin: '50% 100%', duration: isMobile ? 0.88 : 1.35, ease: 'power4.out' })
+          .from(title, { yPercent: 55, scaleY: 1, skewY: 0, transformOrigin: '50% 100%', duration: isMobile ? 0.88 : 1.35, ease: 'power4.out' })
           .from(eyebrow, { x: isMobile ? -26 : -46, autoAlpha: 0, duration: isMobile ? 0.55 : 0.8, ease: 'power3.out' }, 0.18)
           .from(description, { y: isMobile ? 18 : 28, autoAlpha: 0, duration: isMobile ? 0.58 : 0.82, ease: 'power3.out' }, 0.28)
           .from(side, { x: isMobile ? 26 : 46, autoAlpha: 0, duration: isMobile ? 0.58 : 0.9, ease: 'power3.out' }, 0.25)
@@ -527,8 +527,8 @@ function Portfolio({ content }) {
         .from('.contact-kicker', { y: isMobile ? 26 : 40, autoAlpha: 0, duration: isMobile ? 0.6 : 0.9, ease: 'power3.out' })
         .from('.contact-copy > p', { y: isMobile ? 28 : 45, autoAlpha: 0, duration: isMobile ? 0.55 : 0.8, ease: 'power3.out' }, 0.2)
         .from('.contact-copy h2', { clipPath: 'inset(0 0 100% 0)', y: isMobile ? 58 : 95, scaleY: 0.72, transformOrigin: '50% 100%', duration: isMobile ? 0.92 : 1.45, ease: 'power4.inOut' }, 0.28)
-        .from('.contact-copy > a', { y: isMobile ? 28 : 45, autoAlpha: 0, duration: isMobile ? 0.6 : 0.9, ease: 'power3.out' }, 0.62)
-        .from('.contact-panel > *, .contact-qr', { x: isMobile ? 24 : 46, autoAlpha: 0, duration: isMobile ? 0.55 : 0.8, stagger: 0.08, ease: 'power3.out' }, 0.52)
+        .from('.brand-contact-button', { y: isMobile ? 28 : 45, autoAlpha: 0, duration: isMobile ? 0.6 : 0.9, ease: 'power3.out' }, 0.62)
+        .from('.brand-contact-details > *', { x: isMobile ? 24 : 46, autoAlpha: 0, duration: isMobile ? 0.55 : 0.8, stagger: 0.08, ease: 'power3.out' }, 0.52)
         .from('.contact-bottom > *', { y: isMobile ? 25 : 42, autoAlpha: 0, duration: isMobile ? 0.58 : 0.85, stagger: isMobile ? 0.07 : 0.1, ease: 'power3.out' }, 0.7)
 
       if (window.innerWidth > 760) {
@@ -548,7 +548,7 @@ function Portfolio({ content }) {
       document.body.classList.remove('is-opening')
       gsap.set('.opening-screen', { display: 'none' })
       ScrollTrigger.refresh()
-    }, 4800)
+    }, 3400)
 
     const refresh = () => ScrollTrigger.refresh()
     window.addEventListener('load', refresh, { once: true })
@@ -638,17 +638,20 @@ function CapabilityPage({ content, slug }) {
 }
 
 function ProjectPage({ content, id }) {
-  const project = content.projects.find(item => item.id === id)
+  const index = content.projects.findIndex(item => item.id === id)
+  const project = content.projects[index]
   if (!project) return <main className="capability-not-found"><h1>作品不存在</h1><a href="/#work">返回作品集</a></main>
+  const next = content.projects[(index + 1) % content.projects.length]
+  const notes = [ ['01', '项目背景', project.background], ['02', '视觉策略', project.process], ['03', '概念延展', project.outcome] ]
   return <div className="project-detail-page">
-    <header className="capability-detail-nav"><a href="/#work">← 返回作品集</a><span>{content.profile.nameEn} / PORTFOLIO</span><a href="/#contact">联系我</a></header>
-    <main className="shell project-case"><p className="micro-title">{project.type}</p><h1>{project.title}</h1><p>{project.subtitle}</p>
-      <img className="case-image" src={project.image} alt={project.title} />{project.identity && <div className="case-identity"><p>IDENTITY STUDY / 字标与配色探索</p><img src={project.identity} alt={`${project.title} 字标与配色研究`} /></div>}
-      <div className="case-notes">
-        <section><h2>项目背景</h2><p>{project.background || '本页使用原包素材作展示示意。正式使用时，在后台的项目说明中补充品牌、目标人群与设计任务。'}</p></section>
-        <section><h2>视觉策略与制作过程</h2><p>{project.process || '待补充：本人负责的部分、使用工具、关键设计决策。请明确区分个人制作、团队协作与参考素材。'}</p></section>
-        <section><h2>概念延展</h2><p>{project.outcome || '待补充：交付规格、使用渠道与实际效果。没有真实数据时，可展示最终应用与制作前后对比。'}</p></section>
-      </div><a className="case-back" href="/#work">← 浏览更多作品</a>
+    <header className="capability-detail-nav"><a href="/#work"><ArrowLeft /> 返回作品集</a><span>BRAND / VISUAL</span><a href="/#contact">联系我 <ArrowUpRight /></a></header>
+    <main className="shell project-case">
+      <div className="case-heading"><div><p className="micro-title">SELECTED PROJECT / {String(index + 1).padStart(2, '0')}</p><h1>{project.title}</h1><p className="case-subtitle">{project.subtitle}</p></div><span className="case-edition">CONCEPT STUDY<br />2026</span></div>
+      <div className="case-facts"><div><small>DISCIPLINE / 设计范围</small><p>品牌识别 · 艺术指导 · 产品视觉</p></div><div><small>APPROACH / 创作方式</small><p>视觉概念 · AI 辅助图像 · 字标研究</p></div><div><small>STATUS / 项目性质</small><p>自主概念 / 非商业委托</p></div></div>
+      <figure className="case-hero"><img className="case-image" src={project.image} alt={project.title + ' 产品主视觉'} fetchPriority="high" /><figcaption><span>01 / KEY VISUAL</span><span>产品主视觉 · 材质与光线研究</span></figcaption></figure>
+      <div className="case-notes">{notes.map(([number, title, text]) => <section key={number}><span className="case-note-index">{number}</span><h2>{title}</h2><p>{text}</p></section>)}</div>
+      {project.identity && <figure className="case-identity"><figcaption><span>02 / VISUAL IDENTITY</span><span>字标与配色探索</span></figcaption><img loading="lazy" src={project.identity} alt={`${project.title} 字标与配色研究`} /></figure>}
+      <nav className="case-next" aria-label="浏览其他案例"><a className="case-back" href="/#work">← 全部作品</a><a className="case-next-link" href={'/project/' + next.id}><img loading="lazy" src={next.image} alt="" /><span><small>NEXT PROJECT / 下一案例</small><b>{next.title}</b></span><ArrowUpRight /></a></nav>
     </main></div>
 }
 
