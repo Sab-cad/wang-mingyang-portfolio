@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
+ <rect width="1500" height="1000" fill="#D6DDA6"/><rect x="980" width="520" height="1000" fill="#BFC5BB"/>
+ <text x="68" y="85" fill="#BFC5BB" font-family="Arial,sans-serif" font-size="18" letter-spacing="4">IDENTITY EXPLORATION / 03</text>
+ <text x="62" y="390" fill="#BFC5BB" font-family="Georgia,serif" font-size="112" letter-spacing="-5">A SIP OF</text>
+ <text x="62" y="510" fill="#BFC5BB" font-family="Georgia,serif" font-size="112" letter-spacing="-5">GREEN</text>
+ <path d="M68 580 H910" stroke="#BFC5BB" stroke-opacity=".35"/>
+ <text x="68" y="635" fill="#BFC5BB" font-family="Arial,sans-serif" font-size="20" letter-spacing="5">LESS NOISE. MORE CHARACTER.</text>
+ <circle cx="1240" cy="430" r="140" fill="none" stroke="#D6DDA6" stroke-width="2"/><circle cx="1240" cy="430" r="104" fill="none" stroke="#D6DDA6" stroke-width="2"/>
+ <text x="1240" y="460" text-anchor="middle" font-family="Georgia,serif" font-size="90" fill="#D6DDA6">AG</text>
+ <rect x="68" y="780" width="240" height="110" fill="#BFC5BB"/><rect x="308" y="780" width="240" height="110" fill="#243C26"/><rect x="548" y="780" width="240" height="110" fill="#D6DDA6" stroke="#BFC5BB" stroke-width="1"/>
+ <text x="68" y="938" fill="#BFC5BB" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">WORDMARK / COLOUR / VISUAL DIRECTION</text>
+ <text x="1040" y="938" fill="#D6DDA6" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">SELF-INITIATED CONCEPT</text></svg>

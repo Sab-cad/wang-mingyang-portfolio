@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">微信二维码占位图</title>
+  <desc id="desc">请在网站后台上传真实的微信二维码</desc>
+  <rect width="640" height="640" rx="52" fill="#f4f5f1"/>
+  <g fill="#090b0d">
+    <path d="M70 70h170v170H70zm34 34v102h102V104zM400 70h170v170H400zm34 34v102h102V104zM70 400h170v170H70zm34 34v102h102V434z"/>
+    <path d="M278 74h42v42h-42zm66 0h34v34h-34zm-66 70h38v72h-38zm66 16h32v32h-32zm-76 104h44v44h-44zm70-30h42v74h-42zm68 34h36v36h-36zm54-8h36v74h-36zm64 16h40v40h-40zM270 344h40v76h-40zm68 0h36v36h-36zm68-10h78v40h-78zm110 18h48v48h-48zM268 448h38v38h-38zm66-38h42v84h-42zm72 4h38v38h-38zm62 22h96v42h-96zM278 520h44v44h-44zm70 14h42v42h-42zm70-40h42v82h-42zm72 18h74v52h-74z"/>
+  </g>
+  <rect x="128" y="274" width="384" height="92" rx="46" fill="#c8ff27" stroke="#090b0d" stroke-width="8"/>
+  <text x="320" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#090b0d">WECHAT QR</text>
+  <text x="320" y="346" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#090b0d">UPLOAD IN ADMIN</text>
+</svg>

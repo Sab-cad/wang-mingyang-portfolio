@@ -1,63 +1,239 @@
 {
+  "profile": {
+    "nameEn": "BRAND VISUAL",
+    "role": "品牌视觉 / 艺术指导方向",
+    "heroRole": "IDENTITY · ART DIRECTION · DIGITAL",
+    "services": "品牌识别 / 产品视觉 / 数字表达",
+    "location": "独立概念研究",
+    "address": "个人资料待补充",
+    "email": "",
+    "phone": "",
+    "intro": "从品牌的独特之处出发，建立清晰、有辨识度的视觉语言。在字体、色彩、图像与空间之间，寻找一致而有张力的表达。这里先呈现三组自主概念研究，探索品牌视觉如何从一个想法延展到不同触点。",
+    "stats": {
+      "experience": "识别",
+      "projects": "秩序",
+      "brands": "感受"
+    }
+  },
+  "media": {
+    "hero": "/assets/hero-cloud-studio.png",
+    "portrait": "/original/identity-01.svg",
+    "contact": "/assets/hero-cloud-studio.png",
+    "wechatQr": ""
+  },
+  "heroGallery": [
+    {
+      "id": "01-photo",
+      "image": "/original/daily-still.png",
+      "alt": "DAILY STILL · 产品主视觉"
+    },
+    {
+      "id": "01-identity",
+      "image": "/original/identity-01.svg",
+      "alt": "DAILY STILL · 字标与色彩研究"
+    },
+    {
+      "id": "02-photo",
+      "image": "/original/between-sound.png",
+      "alt": "BETWEEN SOUND · 产品主视觉"
+    },
+    {
+      "id": "02-identity",
+      "image": "/original/identity-02.svg",
+      "alt": "BETWEEN SOUND · 字标与色彩研究"
+    },
+    {
+      "id": "03-photo",
+      "image": "/original/sip-of-green.png",
+      "alt": "A SIP OF GREEN · 产品主视觉"
+    },
+    {
+      "id": "03-identity",
+      "image": "/original/identity-03.svg",
+      "alt": "A SIP OF GREEN · 字标与色彩研究"
+    }
+  ],
+  "social": {
+    "behance": "",
+    "instagram": ""
+  },
   "projects": [
     {
       "id": "01",
-      "slug": "still",
-      "title": "日常留白",
-      "en": "DAILY STILL",
-      "subtitle": "用一个蓝色圆点，为日常护肤建立视觉记忆。",
-      "short": "温润材质与冷色焦点的对话",
-      "category": "产品视觉",
-      "type": "护肤产品 / 材质与光线",
+      "title": "DAILY STILL",
+      "subtitle": "日常留白 / 自主概念研究",
+      "type": "BRAND CONCEPT / 2026",
       "image": "/original/daily-still.png",
-      "alt": "蓝色球形瓶盖与乳白护肤瓶，置于暖色石材和玻璃环前",
+      "url": "/project/01",
       "background": "如何让一件没有复杂装饰的日常用品被记住？这次研究选择以球形瓶盖作为单一识别点，用温暖石材和冷调蓝色形成对照，探索安静但不平淡的产品视觉。",
-      "material": "暖白、石灰岩与钴蓝。磨砂瓶身降低反光，玻璃的通透感与粗粝石材形成材质层次。",
-      "colors": ["#F1E8D6", "#C7AA82", "#163DA6"],
-      "decisions": [
-        {"title": "只留一个记忆点", "text": "把色彩集中在球形瓶盖，瓶身维持低饱和。视线先识别蓝色，再回到产品轮廓。"},
-        {"title": "用光线组织空间", "text": "以侧向光和玻璃折射建立画面方向，留白提供呼吸感，不堆叠与产品无关的道具。"},
-        {"title": "延展为展示语言", "text": "网站沿用暖白和钴蓝，并提取圆形作为入口符号，让产品图与页面形成呼应。"}
-      ]
+      "process": "只留一个记忆点：把色彩集中在球形瓶盖，瓶身维持低饱和。视线先识别蓝色，再回到产品轮廓。 用光线组织空间：以侧向光和玻璃折射建立画面方向，留白提供呼吸感，不堆叠与产品无关的道具。 延展为展示语言：字标与色板沿用暖白和钴蓝，以圆形符号连接包装轮廓和身份探索，形成统一的品牌方向。",
+      "outcome": "形成产品主视觉、字标方向、配色研究与数字展示。项目为虚构概念，产品图由 AI 辅助生成，未实际打样或投放。",
+      "identity": "/original/identity-01.svg"
     },
     {
       "id": "02",
-      "slug": "pulse",
-      "title": "声场之间",
-      "en": "BETWEEN SOUND",
-      "subtitle": "把不可见的声音，转化为有张力的物体关系。",
-      "short": "金属、悬浮与暖橙色的节奏",
-      "category": "产品视觉",
-      "type": "便携音频 / 工业质感",
+      "title": "BETWEEN SOUND",
+      "subtitle": "声场之间 / 自主概念研究",
+      "type": "BRAND CONCEPT / 2026",
       "image": "/original/between-sound.png",
-      "alt": "橙色金属便携音箱悬于赤陶台面上方，黑色线缆形成弧线",
+      "url": "/project/02",
       "background": "音频产品不必总用黑色背景和声波图案表达科技感。这次从金属表面、重复孔阵和一条线缆出发，用温暖单色与轻微悬浮感探索另一种声音想象。",
-      "material": "陶土橙、赤铜与炭黑。同色系强调外壳的细微光泽差异，黑色弧线为画面提供节奏。",
-      "colors": ["#C45E2C", "#7E381C", "#272620"],
-      "decisions": [
-        {"title": "从结构中找节奏", "text": "让网孔阵列和圆形旋钮成为画面细节，用秩序和疏密传达精密感。"},
-        {"title": "以静态暗示运动", "text": "产品斜置，线缆形成弧线，台面阴影承接主体。悬浮是概念视觉表达，不是产品功能。"},
-        {"title": "控制视觉噪声", "text": "不加入性能数字、虚构卖点或多余标签，集中研究产品姿态与材质表现。"}
-      ]
+      "process": "从结构中找节奏：让网孔阵列和圆形旋钮成为画面细节，用秩序和疏密传达精密感。 以静态暗示运动：产品斜置，线缆形成弧线，台面阴影承接主体。悬浮是概念视觉表达，不是产品功能。 控制视觉噪声：不加入性能数字、虚构卖点或多余标签，集中研究产品姿态与材质表现。",
+      "outcome": "形成产品主视觉、字标方向、配色研究与数字展示。项目为虚构概念，产品图由 AI 辅助生成，未实际打样或投放。",
+      "identity": "/original/identity-02.svg"
     },
     {
       "id": "03",
-      "slug": "green",
-      "title": "一口青意",
-      "en": "A SIP OF GREEN",
-      "subtitle": "用色彩、果实与水珠，建立清新的第一印象。",
-      "short": "植物色谱与饮品包装概念",
-      "category": "品牌概念",
-      "type": "植物饮品 / 场景与色彩",
+      "title": "A SIP OF GREEN",
+      "subtitle": "一口青意 / 自主概念研究",
+      "type": "BRAND CONCEPT / 2026",
       "image": "/original/sip-of-green.png",
-      "alt": "浅绿色饮品罐与梨片、绿色玻璃圆盘组成的植物饮品静物",
+      "url": "/project/03",
       "background": "如果不依赖大段广告文案，一张画面如何传达口味联想？这次以梨的颜色和形态为线索，用深浅绿色、金属冷凝水珠和透光玻璃建立植物饮品的视觉概念。",
-      "material": "梨皮浅绿、森林深绿与银灰。背景压暗后，包装与果肉形成明度层次，让清新感落在具体材质上。",
-      "colors": ["#D6DDA6", "#243C26", "#BFC5BB"],
-      "decisions": [
-        {"title": "以实物暗示风味", "text": "用梨片作为口味线索，避免用抽象光效替代产品情境。这不是成分或营养承诺。"},
-        {"title": "建立层次而非堆色", "text": "背景、玻璃与罐体均在绿色谱系内，通过明度和透明度变化区分前后关系。"},
-        {"title": "保留身份设计空间", "text": "包装暂不添加真实品牌标识，作为概念主视觉研究，为后续命名与包装系统设计留出空间。"}
+      "process": "以实物暗示风味：用梨片作为口味线索，避免用抽象光效替代产品情境。这不是成分或营养承诺。 建立层次而非堆色：背景、玻璃与罐体均在绿色谱系内，通过明度和透明度变化区分前后关系。 保留身份设计空间：包装暂不添加真实品牌标识，作为概念主视觉研究，为后续命名与包装系统设计留出空间。",
+      "outcome": "形成产品主视觉、字标方向、配色研究与数字展示。项目为虚构概念，产品图由 AI 辅助生成，未实际打样或投放。",
+      "identity": "/original/identity-03.svg"
+    }
+  ],
+  "experience": [
+    {
+      "date": "01 / DISCOVER",
+      "company": "先理解，再表达",
+      "role": "品牌语境与视觉方向",
+      "note": "从品牌个性、受众与使用情境出发，确定值得被记住的核心特征。"
+    },
+    {
+      "date": "02 / DEFINE",
+      "company": "让每个选择彼此呼应",
+      "role": "字体、色彩与图像秩序",
+      "note": "建立明确的主次关系，在识别性与可延展性之间形成一致的视觉语言。"
+    },
+    {
+      "date": "03 / DEVELOP",
+      "company": "从一个画面到多个触点",
+      "role": "主视觉与数字呈现",
+      "note": "围绕核心概念，研究产品图、字标、色板与线上展示的相互关系。"
+    }
+  ],
+  "capabilities": [
+    {
+      "slug": "brand-systems",
+      "number": "01",
+      "icon": "strategy",
+      "title": "品牌识别研究",
+      "en": "Brand Identity",
+      "layout": "ai-large",
+      "text": "字标、色彩与基础秩序，让品牌拥有可辨识的视觉起点。",
+      "cover": "/original/identity-01.svg",
+      "works": [
+        {
+          "id": "01",
+          "title": "DAILY STILL",
+          "description": "日常留白 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/identity-01.svg"
+        },
+        {
+          "id": "02",
+          "title": "BETWEEN SOUND",
+          "description": "声场之间 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/identity-02.svg"
+        },
+        {
+          "id": "03",
+          "title": "A SIP OF GREEN",
+          "description": "一口青意 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/identity-03.svg"
+        }
+      ]
+    },
+    {
+      "slug": "ai-creative",
+      "number": "02",
+      "icon": "brain",
+      "title": "艺术指导",
+      "en": "Art Direction",
+      "layout": "ai-large",
+      "text": "通过构图、材质与光线，建立统一而有情绪的图像语言。",
+      "cover": "/original/daily-still.png",
+      "works": [
+        {
+          "id": "01",
+          "title": "DAILY STILL",
+          "description": "日常留白 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/daily-still.png"
+        },
+        {
+          "id": "02",
+          "title": "BETWEEN SOUND",
+          "description": "声场之间 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/between-sound.png"
+        },
+        {
+          "id": "03",
+          "title": "A SIP OF GREEN",
+          "description": "一口青意 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/sip-of-green.png"
+        }
+      ]
+    },
+    {
+      "slug": "3d-motion",
+      "number": "03",
+      "icon": "cube",
+      "title": "产品视觉",
+      "en": "Product Imagery",
+      "layout": "ai-large",
+      "text": "把产品特征转化为清晰的画面焦点，研究质感与空间关系。",
+      "cover": "/original/daily-still.png",
+      "works": [
+        {
+          "id": "01",
+          "title": "DAILY STILL",
+          "description": "日常留白 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/daily-still.png"
+        },
+        {
+          "id": "02",
+          "title": "BETWEEN SOUND",
+          "description": "声场之间 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/between-sound.png"
+        },
+        {
+          "id": "03",
+          "title": "A SIP OF GREEN",
+          "description": "一口青意 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/sip-of-green.png"
+        }
+      ]
+    },
+    {
+      "slug": "ecommerce",
+      "number": "04",
+      "icon": "image",
+      "title": "数字表达",
+      "en": "Digital Expression",
+      "layout": "ai-large",
+      "text": "让视觉概念进入页面，兼顾信息层级、阅读节奏与交互。",
+      "cover": "/original/identity-01.svg",
+      "works": [
+        {
+          "id": "01",
+          "title": "DAILY STILL",
+          "description": "日常留白 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/identity-01.svg"
+        },
+        {
+          "id": "02",
+          "title": "BETWEEN SOUND",
+          "description": "声场之间 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/identity-02.svg"
+        },
+        {
+          "id": "03",
+          "title": "A SIP OF GREEN",
+          "description": "一口青意 / 自主概念研究 · AI 辅助视觉与字标研究",
+          "image": "/original/identity-03.svg"
+        }
       ]
     }
   ]
