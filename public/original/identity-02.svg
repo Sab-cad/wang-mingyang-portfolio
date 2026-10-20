@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
- <rect width="1500" height="1000" fill="#C45E2C"/><rect x="980" width="520" height="1000" fill="#272620"/>
- <text x="68" y="85" fill="#272620" font-family="Arial,sans-serif" font-size="18" letter-spacing="4">IDENTITY EXPLORATION / 02</text>
- <text x="62" y="390" fill="#272620" font-family="Georgia,serif" font-size="112" letter-spacing="-5">BETWEEN</text>
- <text x="62" y="510" fill="#272620" font-family="Georgia,serif" font-size="112" letter-spacing="-5">SOUND</text>
- <path d="M68 580 H910" stroke="#272620" stroke-opacity=".35"/>
- <text x="68" y="635" fill="#272620" font-family="Arial,sans-serif" font-size="20" letter-spacing="5">LESS NOISE. MORE CHARACTER.</text>
- <circle cx="1240" cy="430" r="140" fill="none" stroke="#C45E2C" stroke-width="2"/><circle cx="1240" cy="430" r="104" fill="none" stroke="#C45E2C" stroke-width="2"/>
- <text x="1240" y="460" text-anchor="middle" font-family="Georgia,serif" font-size="90" fill="#C45E2C">BS</text>
- <rect x="68" y="780" width="240" height="110" fill="#272620"/><rect x="308" y="780" width="240" height="110" fill="#7E381C"/><rect x="548" y="780" width="240" height="110" fill="#C45E2C" stroke="#272620" stroke-width="1"/>
- <text x="68" y="938" fill="#272620" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">WORDMARK / COLOUR / VISUAL DIRECTION</text>
- <text x="1040" y="938" fill="#C45E2C" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">SELF-INITIATED CONCEPT</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000"><rect width="1500" height="1000" fill="#252722"/><text x="75" y="80" fill="#CF682D" font-family="Arial" font-size="18" >WORDMARK / 02</text><text x="75" y="360" fill="#CF682D" font-family="Arial" font-size="130" >BETWEEN</text><text x="75" y="510" fill="#CF682D" font-family="Arial" font-size="130" >SOUND</text><text x="80" y="820" fill="#CF682D" font-family="Arial" font-size="32" >Find your frequency.</text><text x="80" y="930" fill="#CF682D" font-family="Arial" font-size="16" >SELF-INITIATED CONCEPT / 2026</text><rect x="1100" width="400" height="1000" fill="#CF682D"/><text x="1170" y="550" fill="#252722" font-family="Arial" font-size="105" >BS</text></svg>

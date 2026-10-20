@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
- <rect width="1500" height="1000" fill="#F1E8D6"/><rect x="980" width="520" height="1000" fill="#163DA6"/>
- <text x="68" y="85" fill="#163DA6" font-family="Arial,sans-serif" font-size="18" letter-spacing="4">IDENTITY EXPLORATION / 01</text>
- <text x="62" y="390" fill="#163DA6" font-family="Georgia,serif" font-size="112" letter-spacing="-5">DAILY</text>
- <text x="62" y="510" fill="#163DA6" font-family="Georgia,serif" font-size="112" letter-spacing="-5">STILL</text>
- <path d="M68 580 H910" stroke="#163DA6" stroke-opacity=".35"/>
- <text x="68" y="635" fill="#163DA6" font-family="Arial,sans-serif" font-size="20" letter-spacing="5">LESS NOISE. MORE CHARACTER.</text>
- <circle cx="1240" cy="430" r="140" fill="none" stroke="#F1E8D6" stroke-width="2"/><circle cx="1240" cy="430" r="104" fill="none" stroke="#F1E8D6" stroke-width="2"/>
- <text x="1240" y="460" text-anchor="middle" font-family="Georgia,serif" font-size="90" fill="#F1E8D6">DS</text>
- <rect x="68" y="780" width="240" height="110" fill="#163DA6"/><rect x="308" y="780" width="240" height="110" fill="#C7AA82"/><rect x="548" y="780" width="240" height="110" fill="#F1E8D6" stroke="#163DA6" stroke-width="1"/>
- <text x="68" y="938" fill="#163DA6" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">WORDMARK / COLOUR / VISUAL DIRECTION</text>
- <text x="1040" y="938" fill="#F1E8D6" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">SELF-INITIATED CONCEPT</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000"><rect width="1500" height="1000" fill="#F0EDDF"/><text x="75" y="80" fill="#263EA0" font-family="Arial" font-size="18" >WORDMARK / 01</text><text x="75" y="360" fill="#263EA0" font-family="Georgia" font-size="130" >Daily</text><text x="75" y="510" fill="#263EA0" font-family="Georgia" font-size="130" >Still.</text><text x="80" y="820" fill="#263EA0" font-family="Georgia" font-size="32" >Quiet by nature.</text><text x="80" y="930" fill="#263EA0" font-family="Arial" font-size="16" >SELF-INITIATED CONCEPT / 2026</text><rect x="1100" width="400" height="1000" fill="#263EA0"/><text x="1170" y="550" fill="#F0EDDF" font-family="Georgia" font-size="105" >DS</text></svg>

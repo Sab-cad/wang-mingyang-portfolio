@@ -651,6 +651,11 @@ function ProjectPage({ content, id }) {
       <figure className="case-hero"><img className="case-image" src={project.image} alt={project.title + ' 产品主视觉'} fetchPriority="high" /><figcaption><span>01 / KEY VISUAL</span><span>产品主视觉 · 材质与光线研究</span></figcaption></figure>
       <div className="case-notes">{notes.map(([number, title, text]) => <section key={number}><span className="case-note-index">{number}</span><h2>{title}</h2><p>{text}</p></section>)}</div>
       {project.identity && <figure className="case-identity"><figcaption><span>02 / VISUAL IDENTITY</span><span>字标与配色探索</span></figcaption><img loading="lazy" src={project.identity} alt={`${project.title} 字标与配色研究`} /></figure>}
+      {project.system && <section id="brand-system" className="brand-system" style={{'--case-ink':project.system.ink,'--case-paper':project.system.paper}} aria-label="品牌系统与应用">
+        <div className="system-intro"><p className="micro-title">03 / FROM IDENTITY TO EXPERIENCE</p><h2>{project.system.tagline}</h2><p>{project.system.idea}</p></div>
+        <div className="system-palette">{project.system.palette.map(color => <div key={color.hex}><span style={{background:color.hex}} /><b>{color.name}</b><code>{color.hex}</code></div>)}</div>
+        <div className="system-boards">{project.system.boards.map((board,index) => <figure key={board.image}><img loading="lazy" width="1500" height="1000" src={board.image} alt={project.title + ' — ' + board.title} /><figcaption><span>0{index+1} / {board.title}</span><p>{board.note}</p></figcaption></figure>)}</div>
+      </section>}
       <nav className="case-next" aria-label="浏览其他案例"><a className="case-back" href="/#work">← 全部作品</a><a className="case-next-link" href={'/project/' + next.id}><img loading="lazy" src={next.image} alt="" /><span><small>NEXT PROJECT / 下一案例</small><b>{next.title}</b></span><ArrowUpRight /></a></nav>
     </main></div>
 }
