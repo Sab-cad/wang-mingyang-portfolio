@@ -12,10 +12,15 @@ function Header(){return <header className="cs-header"><a className="cs-wordmark
 function Footer(){return <footer className="cs-footer" id="about"><span className="cs-label">ABOUT MY PRACTICE</span><h2>以设计建立表达。<br/><em>以系统延续创造。</em></h2><p>我的实践连接 AI 视觉设计、自动化工作流与 Skill 构建。<br/>从视觉方向到批量交付，再到数据复盘，让创作经验形成持续积累。</p><a className="cs-button" href="/#selected">返回项目精选 ↗</a><div className="cs-footer-bottom"><span>个人作品集 · AI 设计与自动化</span><span>© 2026 · DESIGN × INTELLIGENCE</span><a href="#top">回到顶部 ↑</a></div></footer>}
 
 const projectWorks=[
-  {src:'/case01/cover/selected-03.webp',alt:'青少年护肤套装秋日场景推广图',title:'场景、产品与销售信息，在同一画面里成立。'},
-  {src:'/case01/cover/selected-04.webp',alt:'儿童面霜模特推广图',title:'人物与产品表达'},
-  {src:'/case01/cover/selected-06.webp',alt:'去黑头产品陈列推广图',title:'产品组合与陈列'},
-  {src:'/case01/cover/selected-01.webp',alt:'祛痘棉片产品组合推广图',title:'产品与功效信息'}
+  {src:'/case01/featured/featured-01.webp',alt:'青少年祛痘沐浴露推广图',title:'青少年祛痘沐浴露'},
+  {src:'/case01/featured/featured-02.webp',alt:'青少年控油蓬松洗发水推广图',title:'青少年控油洗发水'},
+  {src:'/case01/featured/featured-03.webp',alt:'婴儿倍护润唇膏推广图',title:'婴儿倍护润唇膏'},
+  {src:'/case01/featured/featured-04.webp',alt:'儿童小暖霜推广图',title:'儿童小暖霜'},
+  {src:'/case01/featured/featured-05.webp',alt:'青少年护手霜礼盒推广图',title:'青少年护手霜'},
+  {src:'/case01/featured/featured-06.webp',alt:'青少年防蛀牙膏推广图',title:'青少年防蛀牙膏'},
+  {src:'/case01/featured/featured-07.webp',alt:'青少年去黑头组合推广图',title:'青少年去黑头贴'},
+  {src:'/case01/featured/featured-08.webp',alt:'青少年控油净痘修护霜推广图',title:'青少年祛痘霜'},
+  {src:'/case01/featured/featured-09.webp',alt:'青少年清润修护面膜推广图',title:'青少年修护面膜'}
 ]
 
 function Art(){const [active,setActive]=useState(0);const current=projectWorks[active];return <div className="cs-real-cover cs-project-visual"><div className="cs-project-stage"><figure className="cs-project-main"><img key={current.src} src={current.src} alt={current.alt}/><figcaption>{String(active+1).padStart(2,'0')} / 代表作品</figcaption></figure><div className="cs-project-info"><span className="cs-label">CASE 01 / AI PRODUCTION SYSTEM</span><h3>推广图<br/>自动化系统。</h3><p>以美术指导建立视觉标准，结合 AI 与自动化工作流，让高质量推广图稳定、持续地产出。</p><div className="cs-project-thumbs" aria-label="悬停切换代表作品">{projectWorks.map((work,i)=><figure className={active===i?'is-active':''} key={work.src} onMouseEnter={()=>setActive(i)}><img src={work.src} alt=""/><figcaption>{String(i+1).padStart(2,'0')}</figcaption></figure>)}</div><span className="cs-project-hint">悬停浏览作品 · 点击查看完整案例 ↗</span></div></div></div>}

@@ -52,7 +52,7 @@
 .cs-project-metric b{font-size:52px;font-weight:300;line-height:1;letter-spacing:-.05em;color:#e4ded5}
 .cs-project-metric b small{font-size:11px;letter-spacing:0;margin-left:6px}
 .cs-project-metric>span{font-size:11px;color:#918b83;padding-bottom:4px}
-.cs-project-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:24px}
+.cs-project-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:24px}
 .cs-project-thumbs figure{position:relative;aspect-ratio:1;overflow:hidden;background:#191916;border:1px solid transparent;opacity:.42;transition:opacity .25s ease,border-color .25s ease,transform .25s ease}
 .cs-project-thumbs figure:hover,.cs-project-thumbs figure.is-active{opacity:1;border-color:#aaa198;transform:translateY(-4px)}
 .cs-project-thumbs img{display:block;width:100%;height:100%;object-fit:cover}
