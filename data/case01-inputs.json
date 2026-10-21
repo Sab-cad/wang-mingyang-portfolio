@@ -1,0 +1,74 @@
+[
+  {
+    "reference": "/case01/inputs/1-reference.webp",
+    "result": "/case01/inputs/1-result.webp",
+    "assets": [
+      {
+        "src": "/case01/inputs/1-product-1.webp",
+        "label": "产品素材 1"
+      },
+      {
+        "src": "/case01/inputs/1-product-2.webp",
+        "label": "产品素材 2"
+      },
+      {
+        "src": "/case01/inputs/1-logo.png",
+        "label": "品牌 Logo"
+      }
+    ],
+    "title": "把水波氛围，转化为产品场景。",
+    "tab": "水波与质感",
+    "input": "水波参考图、产品不同角度素材、品牌 Logo，以及本行标题与卖点文案。",
+    "process": "提取水波质感、产品斜向构图与文字层级，结合真实产品素材重新组织画面。",
+    "output": "得到一张以粉色产品为主体、融合水感场景与品牌文案的推广图。",
+    "brief": "保留水波与斜向构图；使用提交的产品与 Logo；替换为本行文案。"
+  },
+  {
+    "reference": "/case01/inputs/2-reference.png",
+    "result": "/case01/inputs/2-result.webp",
+    "assets": [
+      {
+        "src": "/case01/inputs/2-product-1.webp",
+        "label": "产品素材 1"
+      },
+      {
+        "src": "/case01/inputs/2-product-2.webp",
+        "label": "产品素材 2"
+      },
+      {
+        "src": "/case01/inputs/2-logo.png",
+        "label": "品牌 Logo"
+      }
+    ],
+    "title": "让产品，自然进入手持关系。",
+    "tab": "手持与互动",
+    "input": "手持构图参考、产品素材、品牌 Logo，以及主标题、图标文字和版式要求。",
+    "process": "将参考中的手与产品关系作为构图条件，同时明确产品形态、包装与主体比例。",
+    "output": "得到一张将产品、手部互动与粉色泡沫场景结合的推广图。",
+    "brief": "保留手持互动；适配真实产品形态；让标题、图标与产品共同构成清晰层级。"
+  },
+  {
+    "reference": "/case01/inputs/3-reference.png",
+    "result": "/case01/inputs/3-result.webp",
+    "assets": [
+      {
+        "src": "/case01/inputs/3-product-1.webp",
+        "label": "产品素材 1"
+      },
+      {
+        "src": "/case01/inputs/3-product-2.webp",
+        "label": "产品素材 2"
+      },
+      {
+        "src": "/case01/inputs/3-logo.png",
+        "label": "品牌 Logo"
+      }
+    ],
+    "title": "让双瓶组合，形成完整主视觉。",
+    "tab": "双瓶与层级",
+    "input": "双瓶场景参考、同款产品素材、品牌 Logo，以及标题、底部信息条和数量要求。",
+    "process": "将双瓶位置、前后关系和顶部标题区拆解成明确约束，再匹配本品的颜色与结构。",
+    "output": "得到一张双瓶并置、场景与信息层级统一的推广图。",
+    "brief": "呈现两瓶同款产品；保留顶部标题和底部信息条；使用新的品牌与文案。"
+  }
+]
