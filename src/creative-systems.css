@@ -114,3 +114,35 @@
   .cs-selected,.cs-practice,.cs-visual-note,.cs-context,.cs-process,.cs-input-examples,.cs-standard,.cs-evolution,.cs-gallery,.cs-batch,.cs-results,.cs-learning,.cs-footer{padding-left:16px!important;padding-right:16px!important}
   .cs-input-tabs{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}.cs-home-stats>div{grid-template-columns:92px 1fr}.cs-project-visual{padding:13px!important}.cs-project-thumbs{gap:4px}
 }
+
+/* Editorial cleanup: quieter headings and a consistent copy grid */
+.replica-front h1{line-height:1.12;max-width:860px;text-wrap:balance}
+.replica-front h1 em{display:block;margin-top:.08em}
+.cs-case-hero h1,.cs-practice h2,.cs-section-heading h2,.cs-standard>h2,.cs-learning h2,.cs-footer h2,.cs-visual-note h2{line-height:1.18;letter-spacing:-.045em;text-wrap:balance}
+.cs-section-heading{grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:clamp(50px,8vw,140px);align-items:start}
+.cs-section-heading p{max-width:430px;padding-top:8px}
+.cs-context{grid-template-columns:210px minmax(0,1fr);gap:clamp(45px,7vw,110px);max-width:1600px;margin:0 auto}
+.cs-context>div{display:grid;grid-template-columns:minmax(340px,.9fr) minmax(420px,1.1fr);gap:18px clamp(50px,7vw,120px);align-items:start}
+.cs-context h2{grid-column:1;grid-row:1 / span 2;margin:0;max-width:560px;line-height:1.25}
+.cs-context p{grid-column:2;max-width:620px;margin:0}
+.cs-context p+p{margin-top:2px}
+.cs-feature-caption>div,.cs-project-info,.cs-section-heading>*,.cs-case-subtitle>*{min-width:0}
+.cs-feature-caption h2,.cs-project-info h3,.cs-stage-copy h3,.cs-evolution-title h3,.cs-chart-head h3{letter-spacing:-.035em;line-height:1.25}
+.cs-project-info h3{margin-top:20px}.cs-project-info>p{max-width:420px}
+.cs-case-subtitle{grid-template-columns:minmax(220px,.7fr) minmax(360px,1.3fr) auto;gap:clamp(35px,6vw,100px)}
+.cs-case-subtitle p{max-width:520px;line-height:1.8}
+.cs-process .cs-section-heading,.cs-results .cs-section-heading,.cs-evolution .cs-section-heading,.cs-gallery .cs-section-heading,.cs-input-examples .cs-section-heading{margin-bottom:58px}
+
+@media(max-width:900px){
+  .cs-section-heading{grid-template-columns:1fr;gap:22px}.cs-section-heading p{max-width:620px;padding-top:0}
+  .cs-context{grid-template-columns:1fr;gap:24px}.cs-context>div{grid-template-columns:1fr;gap:18px}.cs-context h2,.cs-context p{grid-column:1;grid-row:auto}.cs-context h2{max-width:680px}.cs-context p{max-width:680px}
+  .cs-case-subtitle{grid-template-columns:1fr 1fr;gap:24px}.cs-case-subtitle a{grid-column:1/-1;justify-self:start}
+}
+
+@media(max-width:650px){
+  .replica-front h1{line-height:1.1}.replica-front h1 em{margin-top:.12em}
+  .cs-case-hero h1,.cs-practice h2,.cs-section-heading h2,.cs-standard>h2,.cs-learning h2,.cs-footer h2,.cs-visual-note h2{line-height:1.16;letter-spacing:-.035em}
+  .cs-section-heading{gap:18px;margin-bottom:36px!important}.cs-section-heading p{font-size:12px;line-height:1.8}
+  .cs-context{gap:20px}.cs-context>div{gap:16px}.cs-context h2{font-size:30px;line-height:1.2}.cs-context p{margin:0}
+  .cs-case-subtitle{grid-template-columns:1fr;gap:14px}.cs-case-subtitle a{grid-column:auto;margin-top:8px}
+}

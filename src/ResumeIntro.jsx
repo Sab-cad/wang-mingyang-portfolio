@@ -12,7 +12,7 @@ export default function ResumeIntro(){
     <div className="replica-flip">
       <div className="replica-face replica-front">
         <span className="replica-badge">● 王名杨 · 美术指导 / AI 视觉设计 ↗</span>
-        <h1>让创意被看见，<br/><em>也让效率被重新设计。</em></h1>
+        <h1>让创意被看见<br/><em>让效率被重新设计</em></h1>
         <p>5 年以上电商视觉设计经验。连接品牌、产品与生成式技术，<br/>让视觉方案更快进入真实业务，并形成可持续复用的创作系统。</p>
         <div className="replica-actions"><a href="#selected">查看作品 <i>↗</i></a><button className="replica-primary" onClick={()=>setFlipped(true)}>查看个人简历</button></div>
       </div>

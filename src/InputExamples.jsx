@@ -15,7 +15,7 @@ export default function InputExamples(){
  const reference=base+e.reference
  return <section className="cs-input-examples" id="inputs">
   <div className="cs-section-line"><span>FROM INPUT TO OUTPUT</span><span>真实素材 × 参考图 × AI 结果</span></div>
-  <div className="cs-section-heading"><h2>上传了什么，<br/><em>最终生成了什么。</em></h2><p>从已完成项目中选取五组代表案例。产品与品牌素材锁定真实信息，参考图定义构图和氛围，AI 完成场景与商业表达。</p></div>
+  <div className="cs-section-heading"><h2>从真实素材<br/><em>到最终画面</em></h2><p>五组代表案例分别对应真实产品素材、视觉参考与最终成品，清晰呈现从输入到输出的设计链路。</p></div>
   <div className="cs-evolution-tabs cs-input-tabs" role="group" aria-label="输入输出示例">{examples.map((item,i)=><button key={item.tab} aria-pressed={active===i} onClick={()=>setActive(i)}><small>0{i+1}</small>{item.tab}</button>)}</div>
   <h3 className="cs-input-title">{e.title}</h3>
   <div className="cs-material-panel">
@@ -31,4 +31,3 @@ export default function InputExamples(){
   <p className="cs-case-summary">每组均使用对应任务的真实产品素材、参考图与最终成品，完整呈现从输入到输出的实际设计链路。</p>
  </section>
 }
-

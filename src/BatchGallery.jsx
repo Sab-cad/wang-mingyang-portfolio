@@ -21,7 +21,7 @@ export default function BatchGallery(){
  function open(work){setCurrent(filtered.indexOf(work));modal.current.showModal()}
  return <section className="cs-gallery cs-batch" id="works">
   <div className="cs-section-line"><span>05 / 精选批量作品</span><span>2026.09 · 真实项目产出</span></div>
-  <div className="cs-section-heading"><h2>批量创作，<br/><em>保留更好的结果。</em></h2><p>当前精选儿童润唇膏、孕产、抚触油、小暖霜与护手霜五类作品，后续按实际筛选持续更新。</p></div>
+  <div className="cs-section-heading"><h2>批量创作<br/><em>精选结果</em></h2><p>精选儿童润唇膏、孕产、抚触油、小暖霜与护手霜五类作品，集中展示稳定的批量产出能力。</p></div>
   <div className="cs-batch-summary"><b>{works.length} <small>张 AI 样图</small></b><b>{categories.length} <small>个产品分组</small></b><span>保留原图 · 按原表编号展示</span></div>
   <div className="cs-batch-tools" ref={heading}>
    <label>产品分组<select value={category} onChange={event=>{setCategory(event.target.value);setPage(0);setCurrent(0)}}><option value="全部">全部作品（{works.length}）</option>{categories.map(item=><option key={item} value={item}>{item}（{works.filter(work=>work.category===item).length}）</option>)}</select></label>
